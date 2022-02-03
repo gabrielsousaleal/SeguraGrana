@@ -19,6 +19,17 @@
 		05A283B627AB4E10000BDC58 /* LoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05A283B527AB4E10000BDC58 /* LoadingView.swift */; };
 		05A283BF27AB5020000BDC58 /* OnboardSalaryViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05A283BE27AB5020000BDC58 /* OnboardSalaryViewModel.swift */; };
 		05A283C227AB520E000BDC58 /* UserDefaultsKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05A283C127AB520E000BDC58 /* UserDefaultsKey.swift */; };
+		05A283C727AB5E37000BDC58 /* Home.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 05A283C627AB5E37000BDC58 /* Home.storyboard */; };
+		05A283C927AB5E5B000BDC58 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05A283C827AB5E5B000BDC58 /* HomeViewController.swift */; };
+		05A283CE27AB6D46000BDC58 /* BaseCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05A283CD27AB6D46000BDC58 /* BaseCoordinator.swift */; };
+		05A283D027AB7273000BDC58 /* DoubtModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05A283CF27AB7273000BDC58 /* DoubtModel.swift */; };
+		05A283D227AB72C2000BDC58 /* DoubtCategoryModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05A283D127AB72C2000BDC58 /* DoubtCategoryModel.swift */; };
+		05A283D427AB7361000BDC58 /* CredidCardModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05A283D327AB7361000BDC58 /* CredidCardModel.swift */; };
+		05A283DC27AB7487000BDC58 /* CreditCardList.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 05A283DB27AB7487000BDC58 /* CreditCardList.storyboard */; };
+		05A283DE27AB74B0000BDC58 /* RegisterCreditCard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 05A283DD27AB74B0000BDC58 /* RegisterCreditCard.storyboard */; };
+		05A283E027AB74BE000BDC58 /* RegisterCreditCardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05A283DF27AB74BE000BDC58 /* RegisterCreditCardViewController.swift */; };
+		05A283E227AB793C000BDC58 /* RegisterCreditCardCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05A283E127AB793C000BDC58 /* RegisterCreditCardCoordinator.swift */; };
+		05A283E527AB7E19000BDC58 /* RegisterCreditCardViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05A283E427AB7E19000BDC58 /* RegisterCreditCardViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +47,17 @@
 		05A283B527AB4E10000BDC58 /* LoadingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingView.swift; sourceTree = "<group>"; };
 		05A283BE27AB5020000BDC58 /* OnboardSalaryViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardSalaryViewModel.swift; sourceTree = "<group>"; };
 		05A283C127AB520E000BDC58 /* UserDefaultsKey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultsKey.swift; sourceTree = "<group>"; };
+		05A283C627AB5E37000BDC58 /* Home.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Home.storyboard; sourceTree = "<group>"; };
+		05A283C827AB5E5B000BDC58 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		05A283CD27AB6D46000BDC58 /* BaseCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseCoordinator.swift; sourceTree = "<group>"; };
+		05A283CF27AB7273000BDC58 /* DoubtModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoubtModel.swift; sourceTree = "<group>"; };
+		05A283D127AB72C2000BDC58 /* DoubtCategoryModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoubtCategoryModel.swift; sourceTree = "<group>"; };
+		05A283D327AB7361000BDC58 /* CredidCardModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CredidCardModel.swift; sourceTree = "<group>"; };
+		05A283DB27AB7487000BDC58 /* CreditCardList.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = CreditCardList.storyboard; sourceTree = "<group>"; };
+		05A283DD27AB74B0000BDC58 /* RegisterCreditCard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = RegisterCreditCard.storyboard; sourceTree = "<group>"; };
+		05A283DF27AB74BE000BDC58 /* RegisterCreditCardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterCreditCardViewController.swift; sourceTree = "<group>"; };
+		05A283E127AB793C000BDC58 /* RegisterCreditCardCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterCreditCardCoordinator.swift; sourceTree = "<group>"; };
+		05A283E427AB7E19000BDC58 /* RegisterCreditCardViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterCreditCardViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -98,6 +120,9 @@
 		05A283A427AB428A000BDC58 /* Feature */ = {
 			isa = PBXGroup;
 			children = (
+				05A283D927AB7472000BDC58 /* CreditCardList */,
+				05A283D527AB73FF000BDC58 /* RegisterCreditCard */,
+				05A283C327AB5E16000BDC58 /* Home */,
 				05A283A527AB4293000BDC58 /* Onboard */,
 			);
 			path = Feature;
@@ -131,6 +156,7 @@
 		05A283B227AB4DC1000BDC58 /* Commons */ = {
 			isa = PBXGroup;
 			children = (
+				05A283CC27AB6D21000BDC58 /* Model */,
 				05A283C027AB5201000BDC58 /* Enums */,
 				05A283AD27AB4D04000BDC58 /* Extensions */,
 				05A283B927AB4F4A000BDC58 /* Coordinator */,
@@ -161,6 +187,8 @@
 		05A283B927AB4F4A000BDC58 /* Coordinator */ = {
 			isa = PBXGroup;
 			children = (
+				05A283CD27AB6D46000BDC58 /* BaseCoordinator.swift */,
+				05A283E127AB793C000BDC58 /* RegisterCreditCardCoordinator.swift */,
 			);
 			path = Coordinator;
 			sourceTree = "<group>";
@@ -195,6 +223,91 @@
 				05A283C127AB520E000BDC58 /* UserDefaultsKey.swift */,
 			);
 			path = Enums;
+			sourceTree = "<group>";
+		};
+		05A283C327AB5E16000BDC58 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				05A283C527AB5E2C000BDC58 /* Storyboard */,
+				05A283C427AB5E1C000BDC58 /* ViewController */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		05A283C427AB5E1C000BDC58 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				05A283C827AB5E5B000BDC58 /* HomeViewController.swift */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		05A283C527AB5E2C000BDC58 /* Storyboard */ = {
+			isa = PBXGroup;
+			children = (
+				05A283C627AB5E37000BDC58 /* Home.storyboard */,
+			);
+			path = Storyboard;
+			sourceTree = "<group>";
+		};
+		05A283CC27AB6D21000BDC58 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				05A283CF27AB7273000BDC58 /* DoubtModel.swift */,
+				05A283D127AB72C2000BDC58 /* DoubtCategoryModel.swift */,
+				05A283D327AB7361000BDC58 /* CredidCardModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		05A283D527AB73FF000BDC58 /* RegisterCreditCard */ = {
+			isa = PBXGroup;
+			children = (
+				05A283D827AB7424000BDC58 /* Storyboard */,
+				05A283D727AB741D000BDC58 /* ViewController */,
+				05A283D627AB7417000BDC58 /* ViewModel */,
+			);
+			path = RegisterCreditCard;
+			sourceTree = "<group>";
+		};
+		05A283D627AB7417000BDC58 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				05A283E427AB7E19000BDC58 /* RegisterCreditCardViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		05A283D727AB741D000BDC58 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				05A283DF27AB74BE000BDC58 /* RegisterCreditCardViewController.swift */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		05A283D827AB7424000BDC58 /* Storyboard */ = {
+			isa = PBXGroup;
+			children = (
+				05A283DD27AB74B0000BDC58 /* RegisterCreditCard.storyboard */,
+			);
+			path = Storyboard;
+			sourceTree = "<group>";
+		};
+		05A283D927AB7472000BDC58 /* CreditCardList */ = {
+			isa = PBXGroup;
+			children = (
+				05A283DA27AB747A000BDC58 /* Storyboard */,
+			);
+			path = CreditCardList;
+			sourceTree = "<group>";
+		};
+		05A283DA27AB747A000BDC58 /* Storyboard */ = {
+			isa = PBXGroup;
+			children = (
+				05A283DB27AB7487000BDC58 /* CreditCardList.storyboard */,
+			);
+			path = Storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -255,9 +368,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				05A283DC27AB7487000BDC58 /* CreditCardList.storyboard in Resources */,
 				05A283A727AB42B2000BDC58 /* OnboardSalary.storyboard in Resources */,
+				05A283DE27AB74B0000BDC58 /* RegisterCreditCard.storyboard in Resources */,
 				05A2839B27AB4237000BDC58 /* LaunchScreen.storyboard in Resources */,
 				05A2839827AB4237000BDC58 /* Assets.xcassets in Resources */,
+				05A283C727AB5E37000BDC58 /* Home.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -270,12 +386,20 @@
 			files = (
 				05A283A927AB4649000BDC58 /* OnboardSalaryViewController.swift in Sources */,
 				05A283B127AB4D97000BDC58 /* UINavigationController+.swift in Sources */,
+				05A283E527AB7E19000BDC58 /* RegisterCreditCardViewModel.swift in Sources */,
+				05A283E027AB74BE000BDC58 /* RegisterCreditCardViewController.swift in Sources */,
 				05A2838F27AB4234000BDC58 /* AppDelegate.swift in Sources */,
 				05A283AF27AB4D11000BDC58 /* String+.swift in Sources */,
+				05A283D427AB7361000BDC58 /* CredidCardModel.swift in Sources */,
 				05A283C227AB520E000BDC58 /* UserDefaultsKey.swift in Sources */,
+				05A283C927AB5E5B000BDC58 /* HomeViewController.swift in Sources */,
+				05A283D027AB7273000BDC58 /* DoubtModel.swift in Sources */,
 				05A283BF27AB5020000BDC58 /* OnboardSalaryViewModel.swift in Sources */,
 				05A283AC27AB497C000BDC58 /* UserDefaultsManager.swift in Sources */,
+				05A283D227AB72C2000BDC58 /* DoubtCategoryModel.swift in Sources */,
+				05A283E227AB793C000BDC58 /* RegisterCreditCardCoordinator.swift in Sources */,
 				05A283B627AB4E10000BDC58 /* LoadingView.swift in Sources */,
+				05A283CE27AB6D46000BDC58 /* BaseCoordinator.swift in Sources */,
 				05A283B427AB4DCD000BDC58 /* BaseViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
