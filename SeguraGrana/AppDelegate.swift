@@ -24,6 +24,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         window = UIWindow(frame: UIScreen.main.bounds)
         callInitialViewController()
+        application.statusBarStyle = .lightContent
         return true
     }
 
@@ -43,7 +44,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         else { return }
     
         let selectedVC = didOnboard ? homeVC : salaryVC
-        let navigationController = UINavigationController(rootViewController: selectedVC)
+        let navigationController = BaseNavigationController(rootViewController: selectedVC)
         window?.rootViewController = navigationController
         window?.makeKeyAndVisible()
     }

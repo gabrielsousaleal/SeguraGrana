@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		053835F827AE2FAD0003ED70 /* BaseNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 053835F727AE2FAD0003ED70 /* BaseNavigationController.swift */; };
 		05A2838F27AB4234000BDC58 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05A2838E27AB4234000BDC58 /* AppDelegate.swift */; };
 		05A2839827AB4237000BDC58 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 05A2839727AB4237000BDC58 /* Assets.xcassets */; };
 		05A2839B27AB4237000BDC58 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 05A2839927AB4237000BDC58 /* LaunchScreen.storyboard */; };
@@ -34,6 +35,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		053835F727AE2FAD0003ED70 /* BaseNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseNavigationController.swift; sourceTree = "<group>"; };
 		05A2838B27AB4234000BDC58 /* SeguraGrana.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SeguraGrana.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		05A2838E27AB4234000BDC58 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		05A2839727AB4237000BDC58 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -122,20 +124,12 @@
 		05A283A427AB428A000BDC58 /* Feature */ = {
 			isa = PBXGroup;
 			children = (
+				05A283B727AB4EB2000BDC58 /* Salary */,
 				05A283D927AB7472000BDC58 /* CreditCardList */,
 				05A283D527AB73FF000BDC58 /* RegisterCreditCard */,
 				05A283C327AB5E16000BDC58 /* Home */,
-				05A283A527AB4293000BDC58 /* Onboard */,
 			);
 			path = Feature;
-			sourceTree = "<group>";
-		};
-		05A283A527AB4293000BDC58 /* Onboard */ = {
-			isa = PBXGroup;
-			children = (
-				05A283B727AB4EB2000BDC58 /* Salary */,
-			);
-			path = Onboard;
 			sourceTree = "<group>";
 		};
 		05A283AA27AB4697000BDC58 /* Manager */ = {
@@ -182,6 +176,7 @@
 			children = (
 				05A283B327AB4DCD000BDC58 /* BaseViewController.swift */,
 				05A283B527AB4E10000BDC58 /* LoadingView.swift */,
+				053835F727AE2FAD0003ED70 /* BaseNavigationController.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -393,6 +388,7 @@
 				05A283E027AB74BE000BDC58 /* RegisterCreditCardViewController.swift in Sources */,
 				05A2838F27AB4234000BDC58 /* AppDelegate.swift in Sources */,
 				05A283AF27AB4D11000BDC58 /* String+.swift in Sources */,
+				053835F827AE2FAD0003ED70 /* BaseNavigationController.swift in Sources */,
 				05A283D427AB7361000BDC58 /* CredidCardModel.swift in Sources */,
 				05CDD0D527ADEF76006FD03D /* SalaryModel.swift in Sources */,
 				05A283C227AB520E000BDC58 /* UserDefaultsKey.swift in Sources */,
@@ -551,6 +547,8 @@
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = OnboardSalary;
+				INFOPLIST_KEY_UIStatusBarHidden = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -562,7 +560,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -579,6 +577,8 @@
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = OnboardSalary;
+				INFOPLIST_KEY_UIStatusBarHidden = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -590,7 +590,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};

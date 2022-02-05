@@ -41,7 +41,10 @@ class OnboardSalaryViewController: BaseViewController {
     private func setupSalaryTextField() {
         salaryTextField.delegate = self
         paydayTextField.delegate = self
+        paydayTextField.keyboardType = .numberPad
         salaryTextField.keyboardType = .decimalPad
+        salaryTextField.keyboardAppearance = .dark
+        paydayTextField.keyboardAppearance = .dark
         salaryTextField.becomeFirstResponder()
     }
 
@@ -84,5 +87,13 @@ extension OnboardSalaryViewController: UITextFieldDelegate {
         let isValidSalary = viewModel.isValidData(salary: salaryTextField.text ?? .empty,
                                                   payday: paydayTextField.text ?? .empty)
         changeContinueButtonState(enableButton: isValidSalary)
+        DispatchQueue.main.async {
+            self.setNeedsStatusBarAppearanceUpdate()
+
+        }
+    }
+    
+    override var preferredStatusBarStyle: UIStatusBarStyle {
+        .lightContent
     }
 }

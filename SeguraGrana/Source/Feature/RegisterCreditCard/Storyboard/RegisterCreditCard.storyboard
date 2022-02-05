@@ -17,13 +17,13 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Adicione seu cartão" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tS7-7h-RoI">
-                                <rect key="frame" x="108.5" y="104" width="197" height="27"/>
+                                <rect key="frame" x="108.5" y="84" width="197" height="27"/>
                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="22"/>
-                                <nil key="textColor"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="61Q-1b-dtK">
-                                <rect key="frame" x="40" y="191" width="334" height="34"/>
+                                <rect key="frame" x="40" y="171" width="334" height="34"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
@@ -46,29 +46,29 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="qual o nome desse cartão?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3O0-eA-odh">
-                                <rect key="frame" x="40" y="166" width="174" height="17"/>
+                                <rect key="frame" x="40" y="146" width="174" height="17"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <nil key="textColor"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Mqu-NG-ET0">
-                                <rect key="frame" x="40" y="300" width="334" height="34"/>
+                                <rect key="frame" x="40" y="280" width="334" height="34"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="qual o dia de pagamento dele?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="x50-Kk-qj9">
-                                <rect key="frame" x="40" y="275" width="334" height="17"/>
+                                <rect key="frame" x="40" y="255" width="334" height="17"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <nil key="textColor"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" white="0.070000000000000007" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="Mqu-NG-ET0" firstAttribute="trailing" secondItem="x50-Kk-qj9" secondAttribute="trailing" id="0qf-FV-8lr"/>
                             <constraint firstItem="x50-Kk-qj9" firstAttribute="leading" secondItem="61Q-1b-dtK" secondAttribute="leading" id="Ev8-V2-dwO"/>
-                            <constraint firstItem="tS7-7h-RoI" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="60" id="JAX-KQ-WrG"/>
+                            <constraint firstItem="tS7-7h-RoI" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="40" id="JAX-KQ-WrG"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="6r9-N1-cwV" secondAttribute="bottom" constant="20" id="JsD-Pa-vjm"/>
                             <constraint firstItem="3O0-eA-odh" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="40" id="Ko9-fC-Nsf"/>
                             <constraint firstItem="Mqu-NG-ET0" firstAttribute="leading" secondItem="61Q-1b-dtK" secondAttribute="leading" id="Mwg-pM-JDC"/>
@@ -96,9 +96,6 @@
         </scene>
     </scenes>
     <resources>
-        <systemColor name="systemBackgroundColor">
-            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
         <systemColor name="systemGreenColor">
             <color red="0.20392156862745098" green="0.7803921568627451" blue="0.34901960784313724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>

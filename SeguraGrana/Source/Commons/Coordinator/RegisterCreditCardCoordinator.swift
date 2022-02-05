@@ -21,7 +21,6 @@ extension RegisterCreditCardCoordinator: BaseCoordinator {
         guard let controller = storyboard.instantiateInitialViewController() as? RegisterCreditCardViewController else {
             return
         }
-        controller.navigationController?.clearNavigation()
         DispatchQueue.main.async {
             navigationController?.pushViewController(controller,
                                                      animated: true)

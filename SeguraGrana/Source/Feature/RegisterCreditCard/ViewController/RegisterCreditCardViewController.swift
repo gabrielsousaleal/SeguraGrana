@@ -32,7 +32,6 @@ class RegisterCreditCardViewController: BaseViewController {
     private func setupUI() {
         setupSalaryTextField()
         setupContinueButton(enabled: false)
-        navigationController?.clearNavigation()
     }
 
     private func setupContinueButton(enabled: Bool) {
@@ -42,9 +41,11 @@ class RegisterCreditCardViewController: BaseViewController {
     private func setupSalaryTextField() {
         nameTextField.delegate = self
         nameTextField.becomeFirstResponder()
+        nameTextField.keyboardAppearance = .dark
 
         deadendTextField.delegate = self
         deadendTextField.keyboardType = .numberPad
+        deadendTextField.keyboardAppearance = .dark
     }
 
     // MARK: - Storyboard Actions
