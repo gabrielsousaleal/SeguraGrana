@@ -9,7 +9,8 @@ import UIKit
 
 extension UINavigationController {
     func clearNavigation() {
-        navigationBar.tintColor = #colorLiteral(red: 0, green: 0, blue: 0, alpha: 1)
+        navigationBar.tintColor = .systemGreen
+        navigationBar.topItem?.title = .empty
         navigationBar.setBackgroundImage(UIImage(), for: .default)
         navigationBar.shadowImage = UIImage()
     }

@@ -32,6 +32,7 @@ class RegisterCreditCardViewController: BaseViewController {
     private func setupUI() {
         setupSalaryTextField()
         setupContinueButton(enabled: false)
+        navigationController?.clearNavigation()
     }
 
     private func setupContinueButton(enabled: Bool) {
