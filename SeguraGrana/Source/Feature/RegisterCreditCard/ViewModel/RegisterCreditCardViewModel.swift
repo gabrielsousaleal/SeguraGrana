@@ -12,7 +12,7 @@ class RegisterCreditCardViewModel {
     // MARK: - Public Methods
 
     func saveCreditCard(name: String, deadend: String) {
-        guard let date = deadend.getDateMonthAndDay() else { return }
+        guard let date = Int(deadend) else { return }
 
         let creditCard = CreditCardModel(name: name,
                                          deadline: date)
@@ -20,6 +20,10 @@ class RegisterCreditCardViewModel {
         let updatedCreditCardList = appendCreditCardOnList(creditCard: creditCard)
         userDefaultsManager.setModel(model: updatedCreditCardList,
                                      key: .creditCards)
+        userDefaultsManager.set(value: true as AnyObject,
+                                key: .didOnboard)
+        let didOnboard = userDefaultsManager.get(key: .didOnboard)
+        print(didOnboard)
     }
 
     func isValidData(name: String, date: String) -> Bool {

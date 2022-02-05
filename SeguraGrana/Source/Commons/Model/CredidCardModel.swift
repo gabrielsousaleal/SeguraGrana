@@ -9,7 +9,7 @@ import Foundation
 
 struct CreditCardModel: Codable {
     var name: String
-    var deadline: Date
+    var deadline: Int
     var totalDoubts: Double = 0
     var doubts: [DoubtModel] = []
 }

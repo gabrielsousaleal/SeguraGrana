@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		053835F827AE2FAD0003ED70 /* BaseNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 053835F727AE2FAD0003ED70 /* BaseNavigationController.swift */; };
+		053835FB27AEF12B0003ED70 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 053835FA27AEF12B0003ED70 /* HomeViewModel.swift */; };
 		05A2838F27AB4234000BDC58 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05A2838E27AB4234000BDC58 /* AppDelegate.swift */; };
 		05A2839827AB4237000BDC58 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 05A2839727AB4237000BDC58 /* Assets.xcassets */; };
 		05A2839B27AB4237000BDC58 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 05A2839927AB4237000BDC58 /* LaunchScreen.storyboard */; };
@@ -36,6 +37,7 @@
 
 /* Begin PBXFileReference section */
 		053835F727AE2FAD0003ED70 /* BaseNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseNavigationController.swift; sourceTree = "<group>"; };
+		053835FA27AEF12B0003ED70 /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
 		05A2838B27AB4234000BDC58 /* SeguraGrana.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SeguraGrana.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		05A2838E27AB4234000BDC58 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		05A2839727AB4237000BDC58 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -75,6 +77,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		053835F927AEF0C80003ED70 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				053835FA27AEF12B0003ED70 /* HomeViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
 		05A2838227AB4234000BDC58 = {
 			isa = PBXGroup;
 			children = (
@@ -225,6 +235,7 @@
 		05A283C327AB5E16000BDC58 /* Home */ = {
 			isa = PBXGroup;
 			children = (
+				053835F927AEF0C80003ED70 /* ViewModel */,
 				05A283C527AB5E2C000BDC58 /* Storyboard */,
 				05A283C427AB5E1C000BDC58 /* ViewController */,
 			);
@@ -385,6 +396,7 @@
 				05A283A927AB4649000BDC58 /* OnboardSalaryViewController.swift in Sources */,
 				05A283B127AB4D97000BDC58 /* UINavigationController+.swift in Sources */,
 				05A283E527AB7E19000BDC58 /* RegisterCreditCardViewModel.swift in Sources */,
+				053835FB27AEF12B0003ED70 /* HomeViewModel.swift in Sources */,
 				05A283E027AB74BE000BDC58 /* RegisterCreditCardViewController.swift in Sources */,
 				05A2838F27AB4234000BDC58 /* AppDelegate.swift in Sources */,
 				05A283AF27AB4D11000BDC58 /* String+.swift in Sources */,

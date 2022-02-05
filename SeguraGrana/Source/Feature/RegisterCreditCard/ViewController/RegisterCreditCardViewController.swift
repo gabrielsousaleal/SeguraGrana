@@ -64,10 +64,6 @@ extension RegisterCreditCardViewController: UITextFieldDelegate {
         let isNameTextField = textField === nameTextField
         if isBackspace || isNameTextField { return true }
 
-        if textField.text?.count == 2 {
-            return false
-        }
-
         let futureText = (textField.text ?? .empty) + string
         return futureText.isValidDayOfMounth()
     }

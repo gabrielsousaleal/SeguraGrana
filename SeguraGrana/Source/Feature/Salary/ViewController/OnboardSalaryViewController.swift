@@ -75,10 +75,6 @@ extension OnboardSalaryViewController: UITextFieldDelegate {
         let isSalaryTextfield = textField === salaryTextField
         if isBackspace || isSalaryTextfield { return true }
 
-        if textField.text?.count == 2 {
-            return false
-        }
-
         let futureText = (textField.text ?? .empty) + string
         return viewModel.isValidPayDay(value: futureText)
     }
