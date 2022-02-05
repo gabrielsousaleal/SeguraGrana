@@ -30,4 +30,9 @@ extension String {
 
         return dateFormatterGet.date(from: self)
     }
+
+    func isValidDayOfMounth() -> Bool {
+        let double = Double(self) ?? 0
+        return double <= 31 && double > 0
+    }
 }

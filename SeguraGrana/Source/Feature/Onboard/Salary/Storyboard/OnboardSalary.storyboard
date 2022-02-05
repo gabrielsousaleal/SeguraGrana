@@ -11,7 +11,6 @@
         <!--Navigation Controller-->
         <scene sceneID="vgp-Tv-pRF">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="a4X-83-hnD" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <navigationController id="qQ5-4h-k8L" sceneMemberID="viewController">
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="00a-LP-AoA">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
@@ -21,6 +20,7 @@
                         <segue destination="Y6W-OH-hqX" kind="relationship" relationship="rootViewController" id="P20-WW-S29"/>
                     </connections>
                 </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="a4X-83-hnD" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-743" y="101"/>
         </scene>
@@ -32,18 +32,26 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Qual o seu salário?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LpY-fc-fSk">
-                                <rect key="frame" x="66.5" y="204" width="187" height="26.5"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Nos fale sobre seu salário" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LpY-fc-fSk">
+                                <rect key="frame" x="32.5" y="104" width="255" height="27"/>
                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="22"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Gob-wN-NAd">
-                                <rect key="frame" x="40" y="350.5" width="240" height="34"/>
+                                <rect key="frame" x="40" y="191" width="240" height="34"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                                 <connections>
                                     <action selector="textFieldEndEditing:" destination="Y6W-OH-hqX" eventType="editingDidEnd" id="sHm-tx-ZRm"/>
+                                </connections>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="HW0-T0-Bhy">
+                                <rect key="frame" x="40" y="290" width="240" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <action selector="textFieldEndEditing:" destination="Y6W-OH-hqX" eventType="editingDidEnd" id="nNp-R9-D4d"/>
                                 </connections>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tbi-cK-c39">
@@ -64,23 +72,45 @@
                                     <action selector="continueButtonDidTapped:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="Acv-bR-GNf"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="quanto você recebe?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ywE-ez-SGw">
+                                <rect key="frame" x="40" y="166" width="240" height="17"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="em qual dia do mês você recebe?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Baz-yJ-2hO">
+                                <rect key="frame" x="40" y="261" width="240" height="17"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="HW0-T0-Bhy" firstAttribute="trailing" secondItem="Gob-wN-NAd" secondAttribute="trailing" id="3sv-Fn-MMK"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="Gob-wN-NAd" secondAttribute="trailing" constant="40" id="E3O-S6-V1i"/>
+                            <constraint firstItem="ywE-ez-SGw" firstAttribute="trailing" secondItem="Gob-wN-NAd" secondAttribute="trailing" id="F8Y-ey-DR2"/>
+                            <constraint firstItem="HW0-T0-Bhy" firstAttribute="top" secondItem="Baz-yJ-2hO" secondAttribute="bottom" constant="12" id="JHM-bP-BZt"/>
+                            <constraint firstItem="HW0-T0-Bhy" firstAttribute="top" secondItem="Gob-wN-NAd" secondAttribute="bottom" constant="65" id="Lm2-BQ-ppB"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="tbi-cK-c39" secondAttribute="bottom" constant="20" id="PKs-li-Yxr"/>
+                            <constraint firstItem="ywE-ez-SGw" firstAttribute="leading" secondItem="Gob-wN-NAd" secondAttribute="leading" id="a5f-OI-flF"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="tbi-cK-c39" secondAttribute="trailing" constant="20" id="dba-7n-ezT"/>
                             <constraint firstItem="Gob-wN-NAd" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="40" id="du4-hB-TQg"/>
                             <constraint firstItem="LpY-fc-fSk" firstAttribute="centerX" secondItem="vDu-zF-Fre" secondAttribute="centerX" id="eP6-Dn-ejv"/>
-                            <constraint firstItem="Gob-wN-NAd" firstAttribute="top" secondItem="LpY-fc-fSk" secondAttribute="bottom" constant="120" id="fV4-pZ-xo3"/>
+                            <constraint firstItem="Gob-wN-NAd" firstAttribute="top" secondItem="LpY-fc-fSk" secondAttribute="bottom" constant="60" id="fV4-pZ-xo3"/>
+                            <constraint firstItem="Baz-yJ-2hO" firstAttribute="leading" secondItem="Gob-wN-NAd" secondAttribute="leading" id="icg-b4-Pnb"/>
                             <constraint firstItem="tbi-cK-c39" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="20" id="lXr-sw-pFi"/>
-                            <constraint firstItem="LpY-fc-fSk" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="160" id="zri-Iq-lwP"/>
+                            <constraint firstItem="Gob-wN-NAd" firstAttribute="top" secondItem="ywE-ez-SGw" secondAttribute="bottom" constant="8" symbolic="YES" id="myp-dW-bwt"/>
+                            <constraint firstItem="HW0-T0-Bhy" firstAttribute="leading" secondItem="Gob-wN-NAd" secondAttribute="leading" id="yUn-wI-k3V"/>
+                            <constraint firstItem="Baz-yJ-2hO" firstAttribute="trailing" secondItem="Gob-wN-NAd" secondAttribute="trailing" id="yUv-FU-HBR"/>
+                            <constraint firstItem="LpY-fc-fSk" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="60" id="zri-Iq-lwP"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="41m-0s-Hyq"/>
                     <connections>
                         <outlet property="continueButton" destination="tbi-cK-c39" id="P7w-vM-Pj1"/>
+                        <outlet property="paydayTextField" destination="HW0-T0-Bhy" id="QAw-Tb-2B9"/>
                         <outlet property="salaryTextField" destination="Gob-wN-NAd" id="am6-2D-naW"/>
                     </connections>
                 </viewController>

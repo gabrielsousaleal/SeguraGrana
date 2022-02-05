@@ -30,6 +30,7 @@
 		05A283E027AB74BE000BDC58 /* RegisterCreditCardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05A283DF27AB74BE000BDC58 /* RegisterCreditCardViewController.swift */; };
 		05A283E227AB793C000BDC58 /* RegisterCreditCardCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05A283E127AB793C000BDC58 /* RegisterCreditCardCoordinator.swift */; };
 		05A283E527AB7E19000BDC58 /* RegisterCreditCardViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05A283E427AB7E19000BDC58 /* RegisterCreditCardViewModel.swift */; };
+		05CDD0D527ADEF76006FD03D /* SalaryModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05CDD0D427ADEF76006FD03D /* SalaryModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -58,6 +59,7 @@
 		05A283DF27AB74BE000BDC58 /* RegisterCreditCardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterCreditCardViewController.swift; sourceTree = "<group>"; };
 		05A283E127AB793C000BDC58 /* RegisterCreditCardCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterCreditCardCoordinator.swift; sourceTree = "<group>"; };
 		05A283E427AB7E19000BDC58 /* RegisterCreditCardViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterCreditCardViewModel.swift; sourceTree = "<group>"; };
+		05CDD0D427ADEF76006FD03D /* SalaryModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SalaryModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -256,6 +258,7 @@
 				05A283CF27AB7273000BDC58 /* DoubtModel.swift */,
 				05A283D127AB72C2000BDC58 /* DoubtCategoryModel.swift */,
 				05A283D327AB7361000BDC58 /* CredidCardModel.swift */,
+				05CDD0D427ADEF76006FD03D /* SalaryModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -391,6 +394,7 @@
 				05A2838F27AB4234000BDC58 /* AppDelegate.swift in Sources */,
 				05A283AF27AB4D11000BDC58 /* String+.swift in Sources */,
 				05A283D427AB7361000BDC58 /* CredidCardModel.swift in Sources */,
+				05CDD0D527ADEF76006FD03D /* SalaryModel.swift in Sources */,
 				05A283C227AB520E000BDC58 /* UserDefaultsKey.swift in Sources */,
 				05A283C927AB5E5B000BDC58 /* HomeViewController.swift in Sources */,
 				05A283D027AB7273000BDC58 /* DoubtModel.swift in Sources */,

@@ -13,6 +13,7 @@ class OnboardSalaryViewController: BaseViewController {
     // MARK: - Storyboard Outlets
 
     @IBOutlet weak var salaryTextField: UITextField!
+    @IBOutlet weak var paydayTextField: UITextField!
     @IBOutlet weak var continueButton: UIButton!
 
     // MARK: - Private Properties
@@ -39,6 +40,7 @@ class OnboardSalaryViewController: BaseViewController {
 
     private func setupSalaryTextField() {
         salaryTextField.delegate = self
+        paydayTextField.delegate = self
         salaryTextField.keyboardType = .decimalPad
         salaryTextField.becomeFirstResponder()
     }
@@ -55,7 +57,9 @@ class OnboardSalaryViewController: BaseViewController {
 
     @IBAction func continueButtonDidTapped(_ sender: Any) {
         let currentSalary = salaryTextField.text ?? .empty
-        viewModel.setSalary(value: currentSalary)
+        let currentPayday = paydayTextField.text ?? .empty
+        viewModel.setSalary(value: currentSalary,
+                            payday: currentPayday)
         RegisterCreditCardCoordinator().start(navigationController: navigationController)
     }
 }
@@ -63,8 +67,22 @@ class OnboardSalaryViewController: BaseViewController {
 // MARK: - Textfield Delegate
 
 extension OnboardSalaryViewController: UITextFieldDelegate {
+    func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
+        let isBackspace = string.isBackSpace()
+        let isSalaryTextfield = textField === salaryTextField
+        if isBackspace || isSalaryTextfield { return true }
+
+        if textField.text?.count == 2 {
+            return false
+        }
+
+        let futureText = (textField.text ?? .empty) + string
+        return viewModel.isValidPayDay(value: futureText)
+    }
+
     func textFieldDidEndEditing(_ textField: UITextField) {
-        let isValidSalary = viewModel.isValidSalary(value: textField.text ?? .empty)
+        let isValidSalary = viewModel.isValidData(salary: salaryTextField.text ?? .empty,
+                                                  payday: paydayTextField.text ?? .empty)
         changeContinueButtonState(enableButton: isValidSalary)
     }
 }

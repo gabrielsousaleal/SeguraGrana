@@ -15,13 +15,25 @@ class OnboardSalaryViewModel {
         isEnabled ? 1 : 0.5
     }
 
-    func isValidSalary(value: String) -> Bool {
-        Double(value) != nil
+    func isValidData(salary: String, payday: String) -> Bool {
+        isValidSalary(value: salary) && isValidPayDay(value: payday)
     }
 
-    func setSalary(value: String) {
+    func setSalary(value: String, payday: String) {
         let userDefaultsManager = UserDefaultsManager()
-        userDefaultsManager.set(value: value as AnyObject,
-                                key: .salary)
+        let salary = SalaryModel(value: Double(value) ?? 0,
+                                 payday: payday)
+        userDefaultsManager.setModel(model: salary,
+                                     key: .salary)
+    }
+
+    func isValidPayDay(value: String) -> Bool {
+        value.isValidDayOfMounth()
+    }
+
+    // MARK: - Private Methods
+
+    private func isValidSalary(value: String) -> Bool {
+        Double(value) != nil
     }
 }

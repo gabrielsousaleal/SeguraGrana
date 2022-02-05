@@ -17,7 +17,9 @@ class RegisterCreditCardViewModel {
         let creditCard = CreditCardModel(name: name,
                                          deadline: date)
         let userDefaultsManager = UserDefaultsManager()
-        userDefaultsManager.saveCreditCard(creditCard: creditCard)
+        let updatedCreditCardList = appendCreditCardOnList(creditCard: creditCard)
+        userDefaultsManager.setModel(model: updatedCreditCardList,
+                                     key: .creditCards)
     }
 
     func isValidData(name: String, date: String) -> Bool {
@@ -26,8 +28,15 @@ class RegisterCreditCardViewModel {
 
     // MARK: - Private Methods
 
+    private func appendCreditCardOnList(creditCard: CreditCardModel) -> [CreditCardModel] {
+        var creditCardList = UserDefaultsManager().getModel(model: [CreditCardModel].self,
+                                                            key: .creditCards)
+        creditCardList?.append(creditCard)
+        return creditCardList ?? []
+    }
+
     private func isValidDate(date: String) -> Bool {
-        date.getDateMonthAndDay() != nil
+        date.isValidDayOfMounth()
     }
 
     private func isValidName(name: String) -> Bool {

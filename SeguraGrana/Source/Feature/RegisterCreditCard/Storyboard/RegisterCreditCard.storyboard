@@ -17,13 +17,13 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Adicione seu cartão" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tS7-7h-RoI">
-                                <rect key="frame" x="108.5" y="204" width="197" height="27"/>
+                                <rect key="frame" x="108.5" y="104" width="197" height="27"/>
                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="22"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="61Q-1b-dtK">
-                                <rect key="frame" x="40" y="351" width="334" height="34"/>
+                                <rect key="frame" x="40" y="191" width="334" height="34"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
@@ -45,20 +45,20 @@
                                     <action selector="continueButtonDidTapped:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="TkH-94-DoP"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Nome" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3O0-eA-odh">
-                                <rect key="frame" x="40" y="322" width="46" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="qual o nome desse cartão?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3O0-eA-odh">
+                                <rect key="frame" x="40" y="166" width="174" height="17"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Mqu-NG-ET0">
-                                <rect key="frame" x="40" y="454" width="334" height="34"/>
+                                <rect key="frame" x="40" y="300" width="334" height="34"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Dia de pagamento" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="x50-Kk-qj9">
-                                <rect key="frame" x="40" y="425" width="334" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="qual o dia de pagamento dele?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="x50-Kk-qj9">
+                                <rect key="frame" x="40" y="275" width="334" height="17"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -68,17 +68,17 @@
                         <constraints>
                             <constraint firstItem="Mqu-NG-ET0" firstAttribute="trailing" secondItem="x50-Kk-qj9" secondAttribute="trailing" id="0qf-FV-8lr"/>
                             <constraint firstItem="x50-Kk-qj9" firstAttribute="leading" secondItem="61Q-1b-dtK" secondAttribute="leading" id="Ev8-V2-dwO"/>
-                            <constraint firstItem="tS7-7h-RoI" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="160" id="JAX-KQ-WrG"/>
+                            <constraint firstItem="tS7-7h-RoI" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="60" id="JAX-KQ-WrG"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="6r9-N1-cwV" secondAttribute="bottom" constant="20" id="JsD-Pa-vjm"/>
                             <constraint firstItem="3O0-eA-odh" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="40" id="Ko9-fC-Nsf"/>
                             <constraint firstItem="Mqu-NG-ET0" firstAttribute="leading" secondItem="61Q-1b-dtK" secondAttribute="leading" id="Mwg-pM-JDC"/>
-                            <constraint firstItem="x50-Kk-qj9" firstAttribute="top" secondItem="61Q-1b-dtK" secondAttribute="bottom" constant="40" id="Q4x-Pk-nrn"/>
+                            <constraint firstItem="x50-Kk-qj9" firstAttribute="top" secondItem="61Q-1b-dtK" secondAttribute="bottom" constant="50" id="Q4x-Pk-nrn"/>
                             <constraint firstItem="tS7-7h-RoI" firstAttribute="centerX" secondItem="vDu-zF-Fre" secondAttribute="centerX" id="RSW-AI-YXF"/>
                             <constraint firstItem="61Q-1b-dtK" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="40" id="UpD-tB-Tda"/>
                             <constraint firstItem="Mqu-NG-ET0" firstAttribute="trailing" secondItem="61Q-1b-dtK" secondAttribute="trailing" id="W2v-bE-XqZ"/>
                             <constraint firstItem="61Q-1b-dtK" firstAttribute="top" secondItem="3O0-eA-odh" secondAttribute="bottom" constant="8" symbolic="YES" id="WrG-X5-UIF"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="61Q-1b-dtK" secondAttribute="trailing" constant="40" id="fT8-6S-dw5"/>
-                            <constraint firstItem="61Q-1b-dtK" firstAttribute="top" secondItem="tS7-7h-RoI" secondAttribute="bottom" constant="120" id="hrN-Gx-U18"/>
+                            <constraint firstItem="61Q-1b-dtK" firstAttribute="top" secondItem="tS7-7h-RoI" secondAttribute="bottom" constant="60" id="hrN-Gx-U18"/>
                             <constraint firstItem="Mqu-NG-ET0" firstAttribute="top" secondItem="x50-Kk-qj9" secondAttribute="bottom" constant="8" symbolic="YES" id="jug-lG-j5Z"/>
                             <constraint firstItem="6r9-N1-cwV" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="20" id="qd9-Oq-8AG"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="6r9-N1-cwV" secondAttribute="trailing" constant="20" id="zXr-BQ-HGo"/>

@@ -24,24 +24,22 @@ class UserDefaultsManager {
         userDefaults.string(forKey: key.rawValue) ?? .empty
     }
 
-    func saveCreditCard(creditCard: CreditCardModel) {
-        var creditCards = getCreditCards()
-        creditCards.append(creditCard)
+    func setModel<T: Codable>(model: T, key: UserDefaultsKey) {
         let encoder = JSONEncoder()
         do {
-            let data = try encoder.encode(creditCards)
-            set(value: data as AnyObject, key: .creditCards)
+            let data = try encoder.encode(model)
+            set(value: data as AnyObject, key: key)
         } catch {}
     }
 
-    func getCreditCards() -> [CreditCardModel] {
-        guard let data = UserDefaults.standard.data(forKey: UserDefaultsKey.creditCards.rawValue) else { return [] }
+    func getModel<T: Codable>(model: T.Type, key: UserDefaultsKey) -> T? {
+        guard let data = UserDefaults.standard.data(forKey: key.rawValue) else { return nil }
         do {
             let decoder = JSONDecoder()
-            let creditCards = try decoder.decode([CreditCardModel].self, from: data)
+            let creditCards = try decoder.decode(T.self, from: data)
             return creditCards
         } catch {
-            return []
+            return nil
         }
     }
 }
