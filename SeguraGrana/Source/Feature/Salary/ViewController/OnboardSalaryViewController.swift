@@ -45,7 +45,6 @@ class OnboardSalaryViewController: BaseViewController {
         salaryTextField.keyboardType = .decimalPad
         salaryTextField.keyboardAppearance = .dark
         paydayTextField.keyboardAppearance = .dark
-        salaryTextField.becomeFirstResponder()
     }
 
     private func changeContinueButtonState(enableButton: Bool) {

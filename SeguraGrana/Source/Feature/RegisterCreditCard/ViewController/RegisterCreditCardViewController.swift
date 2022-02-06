@@ -40,7 +40,6 @@ class RegisterCreditCardViewController: BaseViewController {
 
     private func setupSalaryTextField() {
         nameTextField.delegate = self
-        nameTextField.becomeFirstResponder()
         nameTextField.keyboardAppearance = .dark
 
         deadendTextField.delegate = self
@@ -53,6 +52,7 @@ class RegisterCreditCardViewController: BaseViewController {
     @IBAction func continueButtonDidTapped(_ sender: Any) {
         viewModel.saveCreditCard(name: nameTextField.text ?? .empty,
                                  deadend: deadendTextField.text ?? .empty)
+        ValueInAccountCoordinator().start(navigationController: navigationController)
     }
 }
 

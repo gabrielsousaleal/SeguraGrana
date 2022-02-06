@@ -20,10 +20,6 @@ class RegisterCreditCardViewModel {
         let updatedCreditCardList = appendCreditCardOnList(creditCard: creditCard)
         userDefaultsManager.setModel(model: updatedCreditCardList,
                                      key: .creditCards)
-        userDefaultsManager.set(value: true as AnyObject,
-                                key: .didOnboard)
-        let didOnboard = userDefaultsManager.get(key: .didOnboard)
-        print(didOnboard)
     }
 
     func isValidData(name: String, date: String) -> Bool {

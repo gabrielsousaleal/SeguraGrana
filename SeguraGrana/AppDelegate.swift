@@ -15,11 +15,15 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     private let kHomeVCName = "Home"
     private let kSalaryVCName = "OnboardSalary"
 
+    // MARK: - Private Properties
+
+    private let userDefaultsManager = UserDefaultsManager()
+
     // MARK: - Public Properties
 
     var window: UIWindow?
 
-    // MARK: - Public Methods
+    // MARK: - Life Cycle
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         window = UIWindow(frame: UIScreen.main.bounds)
@@ -30,8 +34,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     // MARK: - Private Methods
 
     private func callInitialViewController() {
-        let userDefaultsManager = UserDefaultsManager()
-        let didOnboard = userDefaultsManager.get(key: .didOnboard) != .empty
+        let didOnboard = userDefaultsManager.get(key: .didOnboard) == "1"
         guard let homeVC = UIStoryboard(
             name: kHomeVCName,
             bundle: nil

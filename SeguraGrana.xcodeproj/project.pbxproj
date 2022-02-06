@@ -10,6 +10,11 @@
 		053835F827AE2FAD0003ED70 /* BaseNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 053835F727AE2FAD0003ED70 /* BaseNavigationController.swift */; };
 		053835FB27AEF12B0003ED70 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 053835FA27AEF12B0003ED70 /* HomeViewModel.swift */; };
 		053835FD27B019050003ED70 /* Date+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 053835FC27B019050003ED70 /* Date+.swift */; };
+		0538360127B082490003ED70 /* ValueInAccount.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0538360027B082490003ED70 /* ValueInAccount.storyboard */; };
+		0538360527B0828C0003ED70 /* ValueInAccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0538360427B0828C0003ED70 /* ValueInAccountViewController.swift */; };
+		0538360727B0835A0003ED70 /* ValueInAccountViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0538360627B0835A0003ED70 /* ValueInAccountViewModel.swift */; };
+		0538360927B083F60003ED70 /* ValueInAccountCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0538360827B083F60003ED70 /* ValueInAccountCoordinator.swift */; };
+		0538360B27B084820003ED70 /* HomeCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0538360A27B084820003ED70 /* HomeCoordinator.swift */; };
 		05A2838F27AB4234000BDC58 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05A2838E27AB4234000BDC58 /* AppDelegate.swift */; };
 		05A2839827AB4237000BDC58 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 05A2839727AB4237000BDC58 /* Assets.xcassets */; };
 		05A2839B27AB4237000BDC58 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 05A2839927AB4237000BDC58 /* LaunchScreen.storyboard */; };
@@ -40,6 +45,11 @@
 		053835F727AE2FAD0003ED70 /* BaseNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseNavigationController.swift; sourceTree = "<group>"; };
 		053835FA27AEF12B0003ED70 /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
 		053835FC27B019050003ED70 /* Date+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+.swift"; sourceTree = "<group>"; };
+		0538360027B082490003ED70 /* ValueInAccount.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ValueInAccount.storyboard; sourceTree = "<group>"; };
+		0538360427B0828C0003ED70 /* ValueInAccountViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ValueInAccountViewController.swift; sourceTree = "<group>"; };
+		0538360627B0835A0003ED70 /* ValueInAccountViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ValueInAccountViewModel.swift; sourceTree = "<group>"; };
+		0538360827B083F60003ED70 /* ValueInAccountCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ValueInAccountCoordinator.swift; sourceTree = "<group>"; };
+		0538360A27B084820003ED70 /* HomeCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCoordinator.swift; sourceTree = "<group>"; };
 		05A2838B27AB4234000BDC58 /* SeguraGrana.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SeguraGrana.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		05A2838E27AB4234000BDC58 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		05A2839727AB4237000BDC58 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -85,6 +95,40 @@
 				053835FA27AEF12B0003ED70 /* HomeViewModel.swift */,
 			);
 			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		053835FE27B082200003ED70 /* ValueInAccount */ = {
+			isa = PBXGroup;
+			children = (
+				0538360327B082800003ED70 /* ViewController */,
+				0538360227B082760003ED70 /* ViewModel */,
+				053835FF27B0822F0003ED70 /* Storyboard */,
+			);
+			path = ValueInAccount;
+			sourceTree = "<group>";
+		};
+		053835FF27B0822F0003ED70 /* Storyboard */ = {
+			isa = PBXGroup;
+			children = (
+				0538360027B082490003ED70 /* ValueInAccount.storyboard */,
+			);
+			path = Storyboard;
+			sourceTree = "<group>";
+		};
+		0538360227B082760003ED70 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				0538360627B0835A0003ED70 /* ValueInAccountViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		0538360327B082800003ED70 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				0538360427B0828C0003ED70 /* ValueInAccountViewController.swift */,
+			);
+			path = ViewController;
 			sourceTree = "<group>";
 		};
 		05A2838227AB4234000BDC58 = {
@@ -136,6 +180,7 @@
 		05A283A427AB428A000BDC58 /* Feature */ = {
 			isa = PBXGroup;
 			children = (
+				053835FE27B082200003ED70 /* ValueInAccount */,
 				05A283B727AB4EB2000BDC58 /* Salary */,
 				05A283D927AB7472000BDC58 /* CreditCardList */,
 				05A283D527AB73FF000BDC58 /* RegisterCreditCard */,
@@ -199,6 +244,8 @@
 			children = (
 				05A283CD27AB6D46000BDC58 /* BaseCoordinator.swift */,
 				05A283E127AB793C000BDC58 /* RegisterCreditCardCoordinator.swift */,
+				0538360827B083F60003ED70 /* ValueInAccountCoordinator.swift */,
+				0538360A27B084820003ED70 /* HomeCoordinator.swift */,
 			);
 			path = Coordinator;
 			sourceTree = "<group>";
@@ -385,6 +432,7 @@
 				05A283DE27AB74B0000BDC58 /* RegisterCreditCard.storyboard in Resources */,
 				05A2839B27AB4237000BDC58 /* LaunchScreen.storyboard in Resources */,
 				05A2839827AB4237000BDC58 /* Assets.xcassets in Resources */,
+				0538360127B082490003ED70 /* ValueInAccount.storyboard in Resources */,
 				05A283C727AB5E37000BDC58 /* Home.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -396,11 +444,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0538360527B0828C0003ED70 /* ValueInAccountViewController.swift in Sources */,
 				053835FD27B019050003ED70 /* Date+.swift in Sources */,
 				05A283A927AB4649000BDC58 /* OnboardSalaryViewController.swift in Sources */,
+				0538360727B0835A0003ED70 /* ValueInAccountViewModel.swift in Sources */,
 				05A283B127AB4D97000BDC58 /* UINavigationController+.swift in Sources */,
 				05A283E527AB7E19000BDC58 /* RegisterCreditCardViewModel.swift in Sources */,
 				053835FB27AEF12B0003ED70 /* HomeViewModel.swift in Sources */,
+				0538360B27B084820003ED70 /* HomeCoordinator.swift in Sources */,
 				05A283E027AB74BE000BDC58 /* RegisterCreditCardViewController.swift in Sources */,
 				05A2838F27AB4234000BDC58 /* AppDelegate.swift in Sources */,
 				05A283AF27AB4D11000BDC58 /* String+.swift in Sources */,
@@ -409,6 +460,7 @@
 				05CDD0D527ADEF76006FD03D /* SalaryModel.swift in Sources */,
 				05A283C227AB520E000BDC58 /* UserDefaultsKey.swift in Sources */,
 				05A283C927AB5E5B000BDC58 /* HomeViewController.swift in Sources */,
+				0538360927B083F60003ED70 /* ValueInAccountCoordinator.swift in Sources */,
 				05A283D027AB7273000BDC58 /* DoubtModel.swift in Sources */,
 				05A283BF27AB5020000BDC58 /* OnboardSalaryViewModel.swift in Sources */,
 				05A283AC27AB497C000BDC58 /* UserDefaultsManager.swift in Sources */,

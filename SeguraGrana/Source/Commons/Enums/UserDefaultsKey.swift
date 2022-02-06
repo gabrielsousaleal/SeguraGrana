@@ -14,4 +14,5 @@ enum UserDefaultsKey: String {
     case currentBalance
     case bills
     case salaryRecieved
+    case teste
 }
