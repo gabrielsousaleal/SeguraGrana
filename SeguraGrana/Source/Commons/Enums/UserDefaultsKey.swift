@@ -11,4 +11,7 @@ enum UserDefaultsKey: String {
     case salary
     case didOnboard
     case creditCards
+    case currentBalance
+    case bills
+    case salaryRecieved
 }
