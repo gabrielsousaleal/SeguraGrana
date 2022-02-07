@@ -66,6 +66,7 @@ class BillRegisterViewController: BaseViewController {
                            deadend: deadendTextField.text ?? .empty,
                            value: valueTextField.text ?? .empty)
         dismiss(animated: true) {
+            self.homeDelegate?.setupLabels()
             self.homeDelegate?.reloadTableViewData()
         }
     }

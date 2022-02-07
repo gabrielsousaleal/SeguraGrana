@@ -11,6 +11,7 @@ protocol HomeViewControllerDelegate: AnyObject {
     func reloadTableViewData()
     func reloadCollectionViewData()
     func addNewCategory()
+    func setupLabels()
 }
 
 class HomeViewController: BaseViewController {
@@ -92,11 +93,6 @@ class HomeViewController: BaseViewController {
         addDoubtButton.layer.cornerRadius = addDoubtButton.frame.size.width/2
     }
 
-    private func setupLabels() {
-        positiveBalance.text = viewModel.currentBalance
-        negativeBalance.text = viewModel.currentNegativeBalance
-    }
-
     // MARK: - Storyboard Actions
     
     @IBAction func recieveSalary(_ sender: Any) {
@@ -156,5 +152,10 @@ extension HomeViewController: HomeViewControllerDelegate {
 
     func reloadCollectionViewData() {
         categoriesCollectionView.reloadData()
+    }
+
+    func setupLabels() {
+        positiveBalance.text = viewModel.currentBalance
+        negativeBalance.text = viewModel.currentNegativeBalance
     }
 }
