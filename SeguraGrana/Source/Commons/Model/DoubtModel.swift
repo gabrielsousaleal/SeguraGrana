@@ -10,7 +10,7 @@ import Foundation
 struct DoubtModel: Codable {
     var value: Double
     var name: String
-    var category: DoubtCategoryModel?
+    var category: DoubtCategoryModel
     var isReccurent: Bool
     var deadline: Int
 }

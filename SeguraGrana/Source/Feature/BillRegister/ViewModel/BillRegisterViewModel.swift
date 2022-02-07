@@ -14,8 +14,11 @@ class BillRegisterViewModel {
     func saveBill(name: String, deadend: String, value: String) {
         guard let date = Int(deadend), let value = Double(value) else { return }
 
+        let category = DoubtCategoryModel(name: "Contas",
+                                          icon: "bills")
         let bill = DoubtModel(value: value,
                               name: name,
+                              category: category,
                               isReccurent: true,
                               deadline: date)
         let userDefaultsManager = UserDefaultsManager()

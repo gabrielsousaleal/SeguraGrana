@@ -124,6 +124,10 @@
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="uEA-1t-RmB">
+                                <rect key="frame" x="0.0" y="315" width="320" height="253"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </tableView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
                         <color key="backgroundColor" white="0.070000000000000007" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -133,12 +137,15 @@
                             <constraint firstItem="a83-i1-ZTq" firstAttribute="top" secondItem="XG2-mx-JTs" secondAttribute="bottom" constant="30" id="1tQ-gA-uRG"/>
                             <constraint firstItem="0yc-Up-8Rp" firstAttribute="top" secondItem="ny4-7z-kSZ" secondAttribute="bottom" constant="15" id="8hd-80-pyq"/>
                             <constraint firstItem="rBf-nD-3JU" firstAttribute="centerY" secondItem="0yc-Up-8Rp" secondAttribute="centerY" id="9z4-KD-PZG"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="uEA-1t-RmB" secondAttribute="bottom" id="DNL-f2-dug"/>
                             <constraint firstItem="0yc-Up-8Rp" firstAttribute="leading" secondItem="ny4-7z-kSZ" secondAttribute="leading" id="Hnm-6I-Kcg"/>
                             <constraint firstItem="XG2-mx-JTs" firstAttribute="centerX" secondItem="vDu-zF-Fre" secondAttribute="centerX" id="IsK-Wb-A3L"/>
                             <constraint firstItem="ny4-7z-kSZ" firstAttribute="top" secondItem="75j-im-bJ2" secondAttribute="bottom" constant="32" id="Jhz-05-x8z"/>
                             <constraint firstItem="pyr-Xi-5bL" firstAttribute="top" secondItem="0yc-Up-8Rp" secondAttribute="bottom" constant="10" id="KCS-eH-L83"/>
                             <constraint firstItem="75j-im-bJ2" firstAttribute="top" secondItem="XG2-mx-JTs" secondAttribute="bottom" constant="30" id="KQB-mV-XS0"/>
                             <constraint firstItem="pyr-Xi-5bL" firstAttribute="leading" secondItem="0yc-Up-8Rp" secondAttribute="leading" id="OlC-w6-DRw"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="uEA-1t-RmB" secondAttribute="trailing" id="Uc9-cf-k8S"/>
+                            <constraint firstItem="uEA-1t-RmB" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="Ugw-EZ-WHm"/>
                             <constraint firstItem="jSD-71-pCm" firstAttribute="trailing" secondItem="vDu-zF-Fre" secondAttribute="trailing" id="aOS-5L-Mlt"/>
                             <constraint firstItem="eqy-b4-Y1Q" firstAttribute="leading" secondItem="rBf-nD-3JU" secondAttribute="leading" id="axa-C6-Dnu"/>
                             <constraint firstItem="jSD-71-pCm" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="eCW-ZZ-h2f"/>
@@ -148,11 +155,13 @@
                             <constraint firstItem="XG2-mx-JTs" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="20" id="lX9-6l-SDY"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="a83-i1-ZTq" secondAttribute="trailing" constant="20" id="vVO-m2-K9y"/>
                             <constraint firstItem="ny4-7z-kSZ" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="20" id="wXj-2l-B6G"/>
+                            <constraint firstItem="uEA-1t-RmB" firstAttribute="top" secondItem="jSD-71-pCm" secondAttribute="bottom" id="zpc-L5-EQO"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="addDoubtButton" destination="a83-i1-ZTq" id="cMi-FF-LNn"/>
                         <outlet property="categoriesCollectionView" destination="jSD-71-pCm" id="bp3-3u-iS7"/>
+                        <outlet property="doubtsTableView" destination="uEA-1t-RmB" id="ycC-ow-5VU"/>
                         <outlet property="negativeBalance" destination="eqy-b4-Y1Q" id="gTU-EP-jJ5"/>
                         <outlet property="positiveBalance" destination="pyr-Xi-5bL" id="KYn-Yr-eJV"/>
                     </connections>

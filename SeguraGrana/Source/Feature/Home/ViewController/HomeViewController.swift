@@ -21,11 +21,13 @@ class HomeViewController: BaseViewController {
     @IBOutlet weak var addDoubtButton: UIButton!
     @IBOutlet weak var positiveBalance: UILabel!
     @IBOutlet weak var negativeBalance: UILabel!
+    @IBOutlet weak var doubtsTableView: UITableView!
     @IBOutlet weak var categoriesCollectionView: UICollectionView!
 
     // MARK: - Constants
 
     private let kCategoryCellIdentifier = "CategoryCollectionViewCell"
+    private let kDoubtCellIdentifier = "DoubtTableViewCell"
 
     // MARK: - Private Properties
 
@@ -87,6 +89,8 @@ class HomeViewController: BaseViewController {
         categoriesCollectionView.dataSource = self
         categoriesCollectionView.register(UINib(nibName: kCategoryCellIdentifier, bundle: nil), forCellWithReuseIdentifier: kCategoryCellIdentifier)
 
+        doubtsTableView.delegate = self
+        doubtsTableView.dataSource = self
     }
 
     private func setupUI() {
@@ -135,6 +139,7 @@ extension HomeViewController: UICollectionViewDelegate, UICollectionViewDataSour
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         viewModel.selectCategory(position: indexPath.row)
         collectionView.reloadData()
+        doubtsTableView.reloadData()
     }
 }
 
@@ -142,8 +147,7 @@ extension HomeViewController: UICollectionViewDelegate, UICollectionViewDataSour
 
 extension HomeViewController: HomeViewControllerDelegate {
     func reloadTableViewData() {
-        print(viewModel.getBillByPosition(position: 0))
-        print(viewModel.billsCount)
+        doubtsTableView.reloadData()
     }
 
     func addNewCategory() {
@@ -157,5 +161,18 @@ extension HomeViewController: HomeViewControllerDelegate {
     func setupLabels() {
         positiveBalance.text = viewModel.currentBalance
         negativeBalance.text = viewModel.currentNegativeBalance
+    }
+}
+
+// MARK: - TableView
+
+extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        viewModel.filtredDoubtsCount
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: "kDoubtCellIdentifier") else { return UITableViewCell() }
+        return cell
     }
 }

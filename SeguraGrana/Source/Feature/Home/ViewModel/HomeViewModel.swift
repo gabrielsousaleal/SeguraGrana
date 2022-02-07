@@ -25,6 +25,8 @@ class HomeViewModel {
 
     private let userDefaultsManager = UserDefaultsManager()
     private var allCategories: [DoubtCategoryModel] = [
+            DoubtCategoryModel(name: "Contas",
+                               icon: "bills"),
             DoubtCategoryModel(name: "Saúde",
                                icon: "health"),
             DoubtCategoryModel(name: "Lazer",
@@ -45,6 +47,14 @@ class HomeViewModel {
     }
 
     // MARK: - Public Methods
+
+    var filtredDoubtsCount: Int {
+        filtredDoubts.count
+    }
+
+    func getDoubtByPosition(position: Int) -> DoubtModel {
+        filtredDoubts[position]
+    }
 
     func saveCategory(name: String) {
         var savedCategories = savedCategories
@@ -104,6 +114,27 @@ class HomeViewModel {
     }
 
     // MARK: - Private Methods
+
+    private var filtredDoubts: [DoubtModel] {
+        if selectedCategory?.name == "Todos" { return allDoubts }
+        return allDoubts.filter({ $0.category.name == selectedCategory?.name })
+    }
+
+    private var allDoubts: [DoubtModel] {
+        var allDoubts: [DoubtModel] = []
+        allDoubts.append(contentsOf: allBills)
+        for creditCard in allCreditCards {
+            for doubt in creditCard.doubts {
+                allDoubts.append(doubt)
+            }
+        }
+        return allDoubts
+    }
+
+    private var allCreditCards: [CreditCardModel] {
+        userDefaultsManager.getModel(model: [CreditCardModel].self,
+                                     key: .creditCards) ?? []
+    }
 
     private func insertSavedCategories() {
         for category in savedCategories {
