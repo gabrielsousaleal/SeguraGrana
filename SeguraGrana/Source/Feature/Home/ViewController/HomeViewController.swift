@@ -7,6 +7,10 @@
 
 import UIKit
 
+protocol HomeViewControllerDelegate: AnyObject {
+    func reloadTableViewData()
+}
+
 class HomeViewController: BaseViewController {
 
     // MARK: - Storyboard Outlets
@@ -34,6 +38,25 @@ class HomeViewController: BaseViewController {
     }
 
     // MARK: - Private Properties
+
+    private func showDoubtRegisterAlert() {
+        let alert = UIAlertController(title: "Cadastrar nova dívida",
+                                      message: "que tipo de dívida você quer cadastrar?",
+                                      preferredStyle: .actionSheet)
+        let card = UIAlertAction(title: "cartão", style: .default) { _ in
+        }
+        let bill = UIAlertAction(title: "conta", style: .default) { _ in
+            BillRegisterCoordinator().start(navigationController: self.navigationController,
+                                            delegate: self)
+        }
+        let cancel = UIAlertAction(title: "cancelar", style: .cancel) { _ in
+            alert.dismiss(animated: true)
+        }
+        alert.addAction(card)
+        alert.addAction(bill)
+        alert.addAction(cancel)
+        present(alert, animated: true)
+    }
 
     private func setupElements() {
         categoriesCollectionView.delegate = self
@@ -72,6 +95,7 @@ class HomeViewController: BaseViewController {
     }
 
     @IBAction func addDoubtButtonTapped(_ sender: Any) {
+        showDoubtRegisterAlert()
     }
 }
 
@@ -90,5 +114,12 @@ extension HomeViewController: UICollectionViewDelegate, UICollectionViewDataSour
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         viewModel.selectCategory(position: indexPath.row)
         collectionView.reloadData()
+    }
+}
+
+extension HomeViewController: HomeViewControllerDelegate {
+    func reloadTableViewData() {
+        print(viewModel.getBillByPosition(position: 0))
+        print(viewModel.billsCount)
     }
 }

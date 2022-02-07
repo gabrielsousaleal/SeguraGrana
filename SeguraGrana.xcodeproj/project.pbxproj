@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		052DEB0627B0A7E700B07F5B /* BillRegister.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 052DEB0527B0A7E700B07F5B /* BillRegister.storyboard */; };
+		052DEB0A27B0A8F000B07F5B /* BillRegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 052DEB0927B0A8F000B07F5B /* BillRegisterViewController.swift */; };
+		052DEB0C27B0A92000B07F5B /* BillRegisterViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 052DEB0B27B0A92000B07F5B /* BillRegisterViewModel.swift */; };
+		052DEB0E27B0A94B00B07F5B /* BillRegisterCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 052DEB0D27B0A94B00B07F5B /* BillRegisterCoordinator.swift */; };
 		053835F827AE2FAD0003ED70 /* BaseNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 053835F727AE2FAD0003ED70 /* BaseNavigationController.swift */; };
 		053835FB27AEF12B0003ED70 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 053835FA27AEF12B0003ED70 /* HomeViewModel.swift */; };
 		053835FD27B019050003ED70 /* Date+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 053835FC27B019050003ED70 /* Date+.swift */; };
@@ -44,6 +48,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		052DEB0527B0A7E700B07F5B /* BillRegister.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = BillRegister.storyboard; sourceTree = "<group>"; };
+		052DEB0927B0A8F000B07F5B /* BillRegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BillRegisterViewController.swift; sourceTree = "<group>"; };
+		052DEB0B27B0A92000B07F5B /* BillRegisterViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BillRegisterViewModel.swift; sourceTree = "<group>"; };
+		052DEB0D27B0A94B00B07F5B /* BillRegisterCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BillRegisterCoordinator.swift; sourceTree = "<group>"; };
 		053835F727AE2FAD0003ED70 /* BaseNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseNavigationController.swift; sourceTree = "<group>"; };
 		053835FA27AEF12B0003ED70 /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
 		053835FC27B019050003ED70 /* Date+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+.swift"; sourceTree = "<group>"; };
@@ -93,6 +101,40 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		052DEB0327B0A7C400B07F5B /* BillRegister */ = {
+			isa = PBXGroup;
+			children = (
+				052DEB0827B0A8E100B07F5B /* ViewModel */,
+				052DEB0727B0A8D800B07F5B /* ViewController */,
+				052DEB0427B0A7D200B07F5B /* Storyboard */,
+			);
+			path = BillRegister;
+			sourceTree = "<group>";
+		};
+		052DEB0427B0A7D200B07F5B /* Storyboard */ = {
+			isa = PBXGroup;
+			children = (
+				052DEB0527B0A7E700B07F5B /* BillRegister.storyboard */,
+			);
+			path = Storyboard;
+			sourceTree = "<group>";
+		};
+		052DEB0727B0A8D800B07F5B /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				052DEB0927B0A8F000B07F5B /* BillRegisterViewController.swift */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		052DEB0827B0A8E100B07F5B /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				052DEB0B27B0A92000B07F5B /* BillRegisterViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
 		053835F927AEF0C80003ED70 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
@@ -184,6 +226,7 @@
 		05A283A427AB428A000BDC58 /* Feature */ = {
 			isa = PBXGroup;
 			children = (
+				052DEB0327B0A7C400B07F5B /* BillRegister */,
 				053835FE27B082200003ED70 /* ValueInAccount */,
 				05A283B727AB4EB2000BDC58 /* Salary */,
 				05A283D927AB7472000BDC58 /* CreditCardList */,
@@ -250,6 +293,7 @@
 				05A283E127AB793C000BDC58 /* RegisterCreditCardCoordinator.swift */,
 				0538360827B083F60003ED70 /* ValueInAccountCoordinator.swift */,
 				0538360A27B084820003ED70 /* HomeCoordinator.swift */,
+				052DEB0D27B0A94B00B07F5B /* BillRegisterCoordinator.swift */,
 			);
 			path = Coordinator;
 			sourceTree = "<group>";
@@ -447,6 +491,7 @@
 				05A2839B27AB4237000BDC58 /* LaunchScreen.storyboard in Resources */,
 				05C83BB427B09383004D0337 /* CategoryCollectionViewCell.xib in Resources */,
 				05A2839827AB4237000BDC58 /* Assets.xcassets in Resources */,
+				052DEB0627B0A7E700B07F5B /* BillRegister.storyboard in Resources */,
 				0538360127B082490003ED70 /* ValueInAccount.storyboard in Resources */,
 				05A283C727AB5E37000BDC58 /* Home.storyboard in Resources */,
 			);
@@ -465,11 +510,13 @@
 				0538360727B0835A0003ED70 /* ValueInAccountViewModel.swift in Sources */,
 				05A283B127AB4D97000BDC58 /* UINavigationController+.swift in Sources */,
 				05A283E527AB7E19000BDC58 /* RegisterCreditCardViewModel.swift in Sources */,
+				052DEB0C27B0A92000B07F5B /* BillRegisterViewModel.swift in Sources */,
 				05C83BB627B094B3004D0337 /* CategoryCollectionViewCell.swift in Sources */,
 				053835FB27AEF12B0003ED70 /* HomeViewModel.swift in Sources */,
 				0538360B27B084820003ED70 /* HomeCoordinator.swift in Sources */,
 				05A283E027AB74BE000BDC58 /* RegisterCreditCardViewController.swift in Sources */,
 				05A2838F27AB4234000BDC58 /* AppDelegate.swift in Sources */,
+				052DEB0A27B0A8F000B07F5B /* BillRegisterViewController.swift in Sources */,
 				05A283AF27AB4D11000BDC58 /* String+.swift in Sources */,
 				053835F827AE2FAD0003ED70 /* BaseNavigationController.swift in Sources */,
 				05A283D427AB7361000BDC58 /* CredidCardModel.swift in Sources */,
@@ -481,6 +528,7 @@
 				05A283BF27AB5020000BDC58 /* OnboardSalaryViewModel.swift in Sources */,
 				05A283AC27AB497C000BDC58 /* UserDefaultsManager.swift in Sources */,
 				05A283D227AB72C2000BDC58 /* DoubtCategoryModel.swift in Sources */,
+				052DEB0E27B0A94B00B07F5B /* BillRegisterCoordinator.swift in Sources */,
 				05A283E227AB793C000BDC58 /* RegisterCreditCardCoordinator.swift in Sources */,
 				05A283B627AB4E10000BDC58 /* LoadingView.swift in Sources */,
 				05A283CE27AB6D46000BDC58 /* BaseCoordinator.swift in Sources */,

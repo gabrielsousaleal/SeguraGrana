@@ -13,7 +13,9 @@ class HomeViewModel {
 
     init() {
         allCategories.insert(DoubtCategoryModel(name: "Todos",
-                                                icon: "todos"), at: 0)
+                                                icon: "todos",
+                                               isSelected: true),
+                             at: 0)
 
         allCategories.append(DoubtCategoryModel(name: "Add",
                                                 icon: "add"))
@@ -37,7 +39,24 @@ class HomeViewModel {
                                icon: "house")
         ]
 
+    private var allBills: [DoubtModel] {
+        userDefaultsManager.getModel(model: [DoubtModel].self,
+                                     key: .bills) ?? []
+    }
+
     // MARK: - Public Methods
+
+    var selectedCategory: DoubtCategoryModel? {
+        allCategories.first(where: { $0.isSelected })
+    }
+
+    var billsCount: Int {
+        allBills.count
+    }
+
+    func getBillByPosition(position: Int) -> DoubtModel {
+        allBills[position]
+    }
 
     func selectCategory(position: Int) {
         diselectAll()
