@@ -9,6 +9,8 @@ import UIKit
 
 protocol HomeViewControllerDelegate: AnyObject {
     func reloadTableViewData()
+    func reloadCollectionViewData()
+    func addNewCategory()
 }
 
 class HomeViewController: BaseViewController {
@@ -26,18 +28,39 @@ class HomeViewController: BaseViewController {
 
     // MARK: - Private Properties
 
-    private let viewModel = HomeViewModel()
+    private var viewModel: HomeViewModel!
 
     // MARK: - Life Cycle
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        viewModel = HomeViewModel(delegate: self)
         setupUI()
         setupLabels()
         setupElements()
     }
 
     // MARK: - Private Properties
+
+    private func showCategoryRegisterAlert() {
+        let alert = UIAlertController(title: "Cadastrar categoria",
+                                      message: "qual o nome da nova categoria?",
+                                      preferredStyle: .alert)
+        alert.addTextField { textField in
+            textField.text = "nome"
+        }
+        let save = UIAlertAction(title: "salvar", style: .default) { _ in
+            let text = alert.textFields?[0].text ?? .empty
+            self.viewModel.saveCategory(name: text)
+            self.categoriesCollectionView.reloadData()
+        }
+        let cancel = UIAlertAction(title: "cancelar", style: .cancel) { _ in
+            alert.dismiss(animated: true)
+        }
+        alert.addAction(save)
+        alert.addAction(cancel)
+        present(alert, animated: true)
+    }
 
     private func showDoubtRegisterAlert() {
         let alert = UIAlertController(title: "Cadastrar nova dívida",
@@ -99,6 +122,8 @@ class HomeViewController: BaseViewController {
     }
 }
 
+// MARK: - CollectionView
+
 extension HomeViewController: UICollectionViewDelegate, UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         viewModel.categoriesCount
@@ -117,9 +142,19 @@ extension HomeViewController: UICollectionViewDelegate, UICollectionViewDataSour
     }
 }
 
+// MARK: - Controller Delegate
+
 extension HomeViewController: HomeViewControllerDelegate {
     func reloadTableViewData() {
         print(viewModel.getBillByPosition(position: 0))
         print(viewModel.billsCount)
+    }
+
+    func addNewCategory() {
+        showCategoryRegisterAlert()
+    }
+
+    func reloadCollectionViewData() {
+        categoriesCollectionView.reloadData()
     }
 }

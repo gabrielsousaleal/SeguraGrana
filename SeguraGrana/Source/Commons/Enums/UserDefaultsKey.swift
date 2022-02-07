@@ -15,4 +15,5 @@ enum UserDefaultsKey: String {
     case bills
     case salaryRecieved
     case teste
+    case categories
 }

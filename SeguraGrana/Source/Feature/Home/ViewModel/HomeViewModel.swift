@@ -9,16 +9,16 @@ import Foundation
 
 class HomeViewModel {
 
+    // MARK: - Private Properties
+
+    private weak var homeViewControllerDelegate: HomeViewControllerDelegate?
+
     // MARK: - Life Cycle
 
-    init() {
-        allCategories.insert(DoubtCategoryModel(name: "Todos",
-                                                icon: "todos",
-                                               isSelected: true),
-                             at: 0)
-
-        allCategories.append(DoubtCategoryModel(name: "Add",
-                                                icon: "add"))
+    init(delegate: HomeViewControllerDelegate?) {
+        self.homeViewControllerDelegate = delegate
+        insertSavedCategories()
+        insertStaticCategories()
     }
 
     // MARK: - Private Properties
@@ -46,6 +46,17 @@ class HomeViewModel {
 
     // MARK: - Public Methods
 
+    func saveCategory(name: String) {
+        var savedCategories = savedCategories
+        let newCategory = DoubtCategoryModel(name: name,
+                                             icon: name)
+        self.allCategories.insert(newCategory,
+                                  at: allCategories.count - 1)
+        savedCategories.append(newCategory)
+        userDefaultsManager.setModel(model: savedCategories,
+                                     key: .categories)
+    }
+
     var selectedCategory: DoubtCategoryModel? {
         allCategories.first(where: { $0.isSelected })
     }
@@ -59,6 +70,10 @@ class HomeViewModel {
     }
 
     func selectCategory(position: Int) {
+        if position == allCategories.count - 1 {
+            homeViewControllerDelegate?.addNewCategory()
+            return
+        }
         diselectAll()
         allCategories[position].isSelected = true
     }
@@ -90,6 +105,23 @@ class HomeViewModel {
 
     // MARK: - Private Methods
 
+    private func insertSavedCategories() {
+        for category in savedCategories {
+            allCategories.append(category)
+        }
+    }
+
+    private func insertStaticCategories() {
+        allCategories.insert(DoubtCategoryModel(name: "Todos",
+                                                icon: "todos",
+                                               isSelected: true),
+                             at: 0)
+
+        allCategories.insert(DoubtCategoryModel(name: "Add",
+                                                icon: "add"),
+                             at: allCategories.count)
+    }
+
     private func diselectAll() {
         for (i, _) in allCategories.enumerated() {
             allCategories[i].isSelected = false
@@ -99,6 +131,11 @@ class HomeViewModel {
     private var currentSalary: SalaryModel? {
         userDefaultsManager.getModel(model: SalaryModel.self,
                                      key: .salary)
+    }
+
+    private var savedCategories: [DoubtCategoryModel] {
+        userDefaultsManager.getModel(model: [DoubtCategoryModel].self,
+                                     key: .categories) ?? []
     }
 
     private var totalBills: Double {
