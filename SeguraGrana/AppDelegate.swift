@@ -44,7 +44,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                 bundle: nil
               ).instantiateViewController(withIdentifier: kSalaryVCName) as? OnboardSalaryViewController
         else { return }
-    
         let selectedVC = didOnboard ? homeVC : salaryVC
         let navigationController = BaseNavigationController(rootViewController: selectedVC)
         window?.rootViewController = navigationController

@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="19162" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19144"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="collection view cell content view" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="CategoryCollectionViewCell" id="dD2-tE-fzH" customClass="CategoryCollectionViewCell" customModule="SeguraGrana" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="273" height="289"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="cf5-Ej-0fe">
+                <rect key="frame" x="0.0" y="0.0" width="273" height="289"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ttz-gV-4PR">
+                        <rect key="frame" x="0.0" y="0.0" width="273" height="289"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Nome" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="z7N-hI-ulY">
+                                <rect key="frame" x="0.0" y="0.0" width="273" height="289"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemGreenColor"/>
+                        <constraints>
+                            <constraint firstItem="z7N-hI-ulY" firstAttribute="top" secondItem="Ttz-gV-4PR" secondAttribute="top" id="3Ah-bk-MlE"/>
+                            <constraint firstItem="z7N-hI-ulY" firstAttribute="leading" secondItem="Ttz-gV-4PR" secondAttribute="leading" id="A6c-1i-fgA"/>
+                            <constraint firstAttribute="trailing" secondItem="z7N-hI-ulY" secondAttribute="trailing" id="R53-gl-3bj"/>
+                            <constraint firstAttribute="bottom" secondItem="z7N-hI-ulY" secondAttribute="bottom" id="RgM-hz-tNS"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <constraints>
+                    <constraint firstAttribute="bottom" secondItem="Ttz-gV-4PR" secondAttribute="bottom" id="21X-By-UMj"/>
+                    <constraint firstItem="Ttz-gV-4PR" firstAttribute="leading" secondItem="cf5-Ej-0fe" secondAttribute="leading" id="4y0-x9-6fu"/>
+                    <constraint firstItem="Ttz-gV-4PR" firstAttribute="top" secondItem="cf5-Ej-0fe" secondAttribute="top" id="TR7-9o-icT"/>
+                    <constraint firstAttribute="trailing" secondItem="Ttz-gV-4PR" secondAttribute="trailing" id="jaP-gb-Lmw"/>
+                </constraints>
+            </collectionViewCellContentView>
+            <size key="customSize" width="273" height="289"/>
+            <connections>
+                <outlet property="backGroundView" destination="Ttz-gV-4PR" id="88q-Dj-Byd"/>
+                <outlet property="nameLabel" destination="z7N-hI-ulY" id="iLD-9H-HeN"/>
+            </connections>
+            <point key="canvasLocation" x="290.57971014492756" y="175.78125"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <systemColor name="systemGreenColor">
+            <color red="0.20392156862745098" green="0.7803921568627451" blue="0.34901960784313724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>

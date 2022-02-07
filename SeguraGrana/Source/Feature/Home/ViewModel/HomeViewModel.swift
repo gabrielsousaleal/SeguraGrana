@@ -9,11 +9,20 @@ import Foundation
 
 class HomeViewModel {
 
+    // MARK: - Life Cycle
+
+    init() {
+        allCategories.insert(DoubtCategoryModel(name: "Todos",
+                                                icon: "todos"), at: 0)
+
+        allCategories.append(DoubtCategoryModel(name: "Add",
+                                                icon: "add"))
+    }
+
     // MARK: - Private Properties
 
     private let userDefaultsManager = UserDefaultsManager()
-    private var defaultDoubtCategories: [DoubtCategoryModel] {
-        [
+    private var allCategories: [DoubtCategoryModel] = [
             DoubtCategoryModel(name: "Saúde",
                                icon: "health"),
             DoubtCategoryModel(name: "Lazer",
@@ -27,9 +36,21 @@ class HomeViewModel {
             DoubtCategoryModel(name: "Casa",
                                icon: "house")
         ]
-    }
 
     // MARK: - Public Methods
+
+    func selectCategory(position: Int) {
+        diselectAll()
+        allCategories[position].isSelected = true
+    }
+
+    func getCategoryByPosition(position: Int) -> DoubtCategoryModel {
+        allCategories[position]
+    }
+
+    var categoriesCount: Int {
+        allCategories.count
+    }
 
     var currentBalance: String {
         userDefaultsManager.get(key: .currentBalance).toCurrency()
@@ -42,29 +63,18 @@ class HomeViewModel {
     }
 
     func recieveSalary() {
-        if !isPayday { return }
-        if hasRecievedSalary { return }
         var currentBalance = Double(userDefaultsManager.get(key: .currentBalance)) ?? 0
         currentBalance += currentSalary?.value ?? 0
         userDefaultsManager.set(value: currentBalance as AnyObject,
                                 key: .currentBalance)
-        userDefaultsManager.set(value: true as AnyObject,
-                                key: .salaryRecieved)
     }
 
     // MARK: - Private Methods
 
-    private var hasRecievedSalary: Bool {
-        let hasRecievedSalaryString = userDefaultsManager.get(key: .salaryRecieved)
-        let hasRecievedSalaryBool = hasRecievedSalaryString == "0"
-        return hasRecievedSalaryBool
-    }
-
-    private var isPayday: Bool {
-        let currentDay = Date().get(.day)
-        let payday = Int(currentSalary?.payday ?? .empty) ?? 0
-        let isPayday = currentDay >= payday
-        return isPayday
+    private func diselectAll() {
+        for (i, _) in allCategories.enumerated() {
+            allCategories[i].isSelected = false
+        }
     }
 
     private var currentSalary: SalaryModel? {

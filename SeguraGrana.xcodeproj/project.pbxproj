@@ -38,6 +38,8 @@
 		05A283E027AB74BE000BDC58 /* RegisterCreditCardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05A283DF27AB74BE000BDC58 /* RegisterCreditCardViewController.swift */; };
 		05A283E227AB793C000BDC58 /* RegisterCreditCardCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05A283E127AB793C000BDC58 /* RegisterCreditCardCoordinator.swift */; };
 		05A283E527AB7E19000BDC58 /* RegisterCreditCardViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05A283E427AB7E19000BDC58 /* RegisterCreditCardViewModel.swift */; };
+		05C83BB427B09383004D0337 /* CategoryCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 05C83BB327B09383004D0337 /* CategoryCollectionViewCell.xib */; };
+		05C83BB627B094B3004D0337 /* CategoryCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05C83BB527B094B3004D0337 /* CategoryCollectionViewCell.swift */; };
 		05CDD0D527ADEF76006FD03D /* SalaryModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05CDD0D427ADEF76006FD03D /* SalaryModel.swift */; };
 /* End PBXBuildFile section */
 
@@ -75,6 +77,8 @@
 		05A283DF27AB74BE000BDC58 /* RegisterCreditCardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterCreditCardViewController.swift; sourceTree = "<group>"; };
 		05A283E127AB793C000BDC58 /* RegisterCreditCardCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterCreditCardCoordinator.swift; sourceTree = "<group>"; };
 		05A283E427AB7E19000BDC58 /* RegisterCreditCardViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterCreditCardViewModel.swift; sourceTree = "<group>"; };
+		05C83BB327B09383004D0337 /* CategoryCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CategoryCollectionViewCell.xib; sourceTree = "<group>"; };
+		05C83BB527B094B3004D0337 /* CategoryCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryCollectionViewCell.swift; sourceTree = "<group>"; };
 		05CDD0D427ADEF76006FD03D /* SalaryModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SalaryModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -285,6 +289,7 @@
 		05A283C327AB5E16000BDC58 /* Home */ = {
 			isa = PBXGroup;
 			children = (
+				05C83BB227B09370004D0337 /* View */,
 				053835F927AEF0C80003ED70 /* ViewModel */,
 				05A283C527AB5E2C000BDC58 /* Storyboard */,
 				05A283C427AB5E1C000BDC58 /* ViewController */,
@@ -369,6 +374,15 @@
 			path = Storyboard;
 			sourceTree = "<group>";
 		};
+		05C83BB227B09370004D0337 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				05C83BB327B09383004D0337 /* CategoryCollectionViewCell.xib */,
+				05C83BB527B094B3004D0337 /* CategoryCollectionViewCell.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -431,6 +445,7 @@
 				05A283A727AB42B2000BDC58 /* OnboardSalary.storyboard in Resources */,
 				05A283DE27AB74B0000BDC58 /* RegisterCreditCard.storyboard in Resources */,
 				05A2839B27AB4237000BDC58 /* LaunchScreen.storyboard in Resources */,
+				05C83BB427B09383004D0337 /* CategoryCollectionViewCell.xib in Resources */,
 				05A2839827AB4237000BDC58 /* Assets.xcassets in Resources */,
 				0538360127B082490003ED70 /* ValueInAccount.storyboard in Resources */,
 				05A283C727AB5E37000BDC58 /* Home.storyboard in Resources */,
@@ -450,6 +465,7 @@
 				0538360727B0835A0003ED70 /* ValueInAccountViewModel.swift in Sources */,
 				05A283B127AB4D97000BDC58 /* UINavigationController+.swift in Sources */,
 				05A283E527AB7E19000BDC58 /* RegisterCreditCardViewModel.swift in Sources */,
+				05C83BB627B094B3004D0337 /* CategoryCollectionViewCell.swift in Sources */,
 				053835FB27AEF12B0003ED70 /* HomeViewModel.swift in Sources */,
 				0538360B27B084820003ED70 /* HomeCoordinator.swift in Sources */,
 				05A283E027AB74BE000BDC58 /* RegisterCreditCardViewController.swift in Sources */,

@@ -11,4 +11,5 @@ import UIKit
 struct DoubtCategoryModel: Codable {
     var name: String
     var icon: String
+    var isSelected = false
 }

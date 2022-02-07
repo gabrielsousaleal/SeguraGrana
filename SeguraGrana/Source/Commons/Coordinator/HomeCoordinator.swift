@@ -21,9 +21,10 @@ extension HomeCoordinator: BaseCoordinator {
         guard let controller = storyboard.instantiateInitialViewController() as? HomeViewController else {
             return
         }
+        navigationController?.navigationBar.isHidden = true
         DispatchQueue.main.async {
-            navigationController?.pushViewController(controller,
-                                                     animated: true)
+            navigationController?.present(controller,
+                                          animated: true)
         }
     }
 }
