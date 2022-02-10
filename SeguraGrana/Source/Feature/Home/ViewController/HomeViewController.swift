@@ -27,7 +27,7 @@ class HomeViewController: BaseViewController {
     // MARK: - Constants
 
     private let kCategoryCellIdentifier = "CategoryCollectionViewCell"
-    private let kDoubtCellIdentifier = "DoubtTableViewCell"
+    private let kDoubtCellIdentifier = "DoubtCell"
 
     // MARK: - Private Properties
 
@@ -41,7 +41,6 @@ class HomeViewController: BaseViewController {
         setupUI()
         setupLabels()
         setupElements()
-        print(UserDefaultsManager().getModel(model: [CreditCardModel].self, key: .creditCards))
     }
 
     // MARK: - Private Properties
@@ -89,7 +88,19 @@ class HomeViewController: BaseViewController {
     private func setupElements() {
         categoriesCollectionView.delegate = self
         categoriesCollectionView.dataSource = self
-        categoriesCollectionView.register(UINib(nibName: kCategoryCellIdentifier, bundle: nil), forCellWithReuseIdentifier: kCategoryCellIdentifier)
+        categoriesCollectionView.register(
+            UINib(
+                nibName: kCategoryCellIdentifier,
+                bundle: nil
+            ),
+            forCellWithReuseIdentifier: kCategoryCellIdentifier
+        )
+        doubtsTableView.register(
+            UINib(
+                nibName: kDoubtCellIdentifier,
+                bundle: nil
+            ), forCellReuseIdentifier: kDoubtCellIdentifier
+        )
 
         doubtsTableView.delegate = self
         doubtsTableView.dataSource = self
@@ -174,7 +185,9 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        guard let cell = tableView.dequeueReusableCell(withIdentifier: "kDoubtCellIdentifier") else { return UITableViewCell() }
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: kDoubtCellIdentifier) as? DoubtCell else { return UITableViewCell() }
+        let doubt = viewModel.getDoubtByPosition(position: indexPath.row)
+        cell.setup(doubt: doubt, card: nil)
         return cell
     }
 }

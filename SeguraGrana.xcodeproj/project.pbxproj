@@ -50,6 +50,9 @@
 		05CDD0D527ADEF76006FD03D /* SalaryModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05CDD0D427ADEF76006FD03D /* SalaryModel.swift */; };
 		05D3D39227B599510098C721 /* DoubtRegisterViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05D3D39127B599510098C721 /* DoubtRegisterViewModel.swift */; };
 		05D3D39427B5B9410098C721 /* UITextField+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05D3D39327B5B9410098C721 /* UITextField+.swift */; };
+		05D3D39927B5CF140098C721 /* DoubtCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05D3D39827B5CF140098C721 /* DoubtCell.swift */; };
+		05D3D39B27B5CF2F0098C721 /* DoubtCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 05D3D39A27B5CF2F0098C721 /* DoubtCell.xib */; };
+		05D3D39F27B5D1B00098C721 /* DoubtCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05D3D39E27B5D1B00098C721 /* DoubtCellViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -98,6 +101,9 @@
 		05CDD0D427ADEF76006FD03D /* SalaryModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SalaryModel.swift; sourceTree = "<group>"; };
 		05D3D39127B599510098C721 /* DoubtRegisterViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoubtRegisterViewModel.swift; sourceTree = "<group>"; };
 		05D3D39327B5B9410098C721 /* UITextField+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITextField+.swift"; sourceTree = "<group>"; };
+		05D3D39827B5CF140098C721 /* DoubtCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoubtCell.swift; sourceTree = "<group>"; };
+		05D3D39A27B5CF2F0098C721 /* DoubtCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DoubtCell.xib; sourceTree = "<group>"; };
+		05D3D39E27B5D1B00098C721 /* DoubtCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoubtCellViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -149,6 +155,7 @@
 			isa = PBXGroup;
 			children = (
 				053835FA27AEF12B0003ED70 /* HomeViewModel.swift */,
+				05D3D39E27B5D1B00098C721 /* DoubtCellViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -468,10 +475,28 @@
 		05C83BB227B09370004D0337 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				05D3D39D27B5D19A0098C721 /* CategoryCell */,
+				05D3D39C27B5D18F0098C721 /* DoubtCell */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		05D3D39C27B5D18F0098C721 /* DoubtCell */ = {
+			isa = PBXGroup;
+			children = (
+				05D3D39A27B5CF2F0098C721 /* DoubtCell.xib */,
+				05D3D39827B5CF140098C721 /* DoubtCell.swift */,
+			);
+			path = DoubtCell;
+			sourceTree = "<group>";
+		};
+		05D3D39D27B5D19A0098C721 /* CategoryCell */ = {
+			isa = PBXGroup;
+			children = (
 				05C83BB327B09383004D0337 /* CategoryCollectionViewCell.xib */,
 				05C83BB527B094B3004D0337 /* CategoryCollectionViewCell.swift */,
 			);
-			path = View;
+			path = CategoryCell;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -542,6 +567,7 @@
 				052DEB0627B0A7E700B07F5B /* BillRegister.storyboard in Resources */,
 				0538360127B082490003ED70 /* ValueInAccount.storyboard in Resources */,
 				05A283C727AB5E37000BDC58 /* Home.storyboard in Resources */,
+				05D3D39B27B5CF2F0098C721 /* DoubtCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -564,6 +590,7 @@
 				053835FB27AEF12B0003ED70 /* HomeViewModel.swift in Sources */,
 				0538360B27B084820003ED70 /* HomeCoordinator.swift in Sources */,
 				05A283E027AB74BE000BDC58 /* RegisterCreditCardViewController.swift in Sources */,
+				05D3D39F27B5D1B00098C721 /* DoubtCellViewModel.swift in Sources */,
 				05A2838F27AB4234000BDC58 /* AppDelegate.swift in Sources */,
 				052DEB0A27B0A8F000B07F5B /* BillRegisterViewController.swift in Sources */,
 				05A283AF27AB4D11000BDC58 /* String+.swift in Sources */,
@@ -584,6 +611,7 @@
 				05A283E227AB793C000BDC58 /* RegisterCreditCardCoordinator.swift in Sources */,
 				05A283B627AB4E10000BDC58 /* LoadingView.swift in Sources */,
 				05A283CE27AB6D46000BDC58 /* BaseCoordinator.swift in Sources */,
+				05D3D39927B5CF140098C721 /* DoubtCell.swift in Sources */,
 				05A283B427AB4DCD000BDC58 /* BaseViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
