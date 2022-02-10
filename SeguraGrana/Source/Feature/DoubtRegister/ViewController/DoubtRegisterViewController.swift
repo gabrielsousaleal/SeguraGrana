@@ -12,6 +12,7 @@ class DoubtRegisterController: BaseViewController {
 
     // MARK: - Storyboard Outlets
 
+    @IBOutlet weak var valueTextField: UITextField!
     @IBOutlet weak var continueButton: UIButton!
     @IBOutlet weak var doubtNameTextField: UITextField!
     @IBOutlet weak var selectCategoryTextField: UITextField!
@@ -28,7 +29,7 @@ class DoubtRegisterController: BaseViewController {
     private var datePickerView = UIDatePicker()
     private var categoryPickerView = UIPickerView()
     private var cardPickerView = UIPickerView()
-    private let viewModel = DoubtRegisterViewModel()
+    private var viewModel: DoubtRegisterViewModel?
     
     // MARK: - Life Cycle
 
@@ -38,13 +39,24 @@ class DoubtRegisterController: BaseViewController {
         setupPickerViews()
         setupTextFields()
         setupLabels()
+        setupContinueButton(enabled: false)
+    }
+
+    // MARK: - Public Methods
+
+    func setup(viewModel: DoubtRegisterViewModel?) {
+        self.viewModel = viewModel
     }
 
     // MARK: - Private Methods
 
+    private func setupContinueButton(enabled: Bool) {
+        continueButton.isEnabled = enabled
+    }
+
     private func setupLabels() {
-        selectCardTextField.text = viewModel.cardPickerContent.first
-        selectCategoryTextField.text = viewModel.categoryPickerContent.first
+        selectCardTextField.text = viewModel?.cardPickerContent.first
+        selectCategoryTextField.text = viewModel?.categoryPickerContent.first
         selectDateTextField.text = Date.now.toString()
     }
 
@@ -79,6 +91,9 @@ class DoubtRegisterController: BaseViewController {
         selectCardTextField.keyboardAppearance = .dark
         selectCategoryTextField.keyboardAppearance = .dark
         selectDateTextField.keyboardAppearance = .dark
+
+        doubtNameTextField.delegate = self
+        valueTextField.delegate = self
     }
 
     private func registerKeyboardNotifications() {
@@ -109,10 +124,14 @@ class DoubtRegisterController: BaseViewController {
     // MARK: - Storyboard Actions
 
     @IBAction func continueButtonDidTapped(_ sender: Any) {
+        viewModel?.saveDoubt(name: doubtNameTextField.text ?? .empty,
+                            value: valueTextField.text ?? .empty,
+                            date: datePickerView.date,
+                            creditCardName: selectCardTextField.text ?? .empty,
+                            category: selectCategoryTextField.text ?? .empty)
+        dismiss(animated: true)
     }
 }
-
-// MARK: - DatePicker
 
 // MARK: - PickerView Delegate
 
@@ -124,9 +143,9 @@ extension DoubtRegisterController: UIPickerViewDelegate, UIPickerViewDataSource 
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
         switch pickerView {
         case cardPickerView:
-            selectCardTextField.text = viewModel.cardPickerContent[row]
+            selectCardTextField.text = viewModel?.cardPickerContent[row]
         case categoryPickerView:
-            selectCategoryTextField.text = viewModel.categoryPickerContent[row]
+            selectCategoryTextField.text = viewModel?.categoryPickerContent[row]
         default:
             return
         }
@@ -135,9 +154,9 @@ extension DoubtRegisterController: UIPickerViewDelegate, UIPickerViewDataSource 
     func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
         switch pickerView {
         case cardPickerView:
-            return viewModel.cardPickerContent[row]
+            return viewModel?.cardPickerContent[row]
         case categoryPickerView:
-            return viewModel.categoryPickerContent[row]
+            return viewModel?.categoryPickerContent[row]
         default:
             return .empty
         }
@@ -146,11 +165,24 @@ extension DoubtRegisterController: UIPickerViewDelegate, UIPickerViewDataSource 
     func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
         switch pickerView {
         case cardPickerView:
-            return viewModel.cardPickerContent.count
+            return viewModel?.cardPickerContent.count ?? 0
         case categoryPickerView:
-            return viewModel.categoryPickerContent.count
+            return viewModel?.categoryPickerContent.count ?? 0
         default:
             return 0
         }
+    }
+}
+
+// MARK: - Textfield Delegate
+
+extension DoubtRegisterController: UITextFieldDelegate {
+    func textFieldDidEndEditing(_ textField: UITextField) {
+        setupContinueButton(
+            enabled: viewModel?.validadeData(
+                name: doubtNameTextField.text ?? .empty,
+                value: valueTextField.text ?? .empty
+            ) ?? false
+        )
     }
 }

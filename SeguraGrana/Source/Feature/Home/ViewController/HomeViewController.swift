@@ -41,6 +41,7 @@ class HomeViewController: BaseViewController {
         setupUI()
         setupLabels()
         setupElements()
+        print(UserDefaultsManager().getModel(model: [CreditCardModel].self, key: .creditCards))
     }
 
     // MARK: - Private Properties
@@ -70,7 +71,7 @@ class HomeViewController: BaseViewController {
                                       message: "que tipo de dívida você quer cadastrar?",
                                       preferredStyle: .actionSheet)
         let card = UIAlertAction(title: "cartão", style: .default) { _ in
-            DoubtRegisterCoordinator().start(navigationController: self.navigationController)
+            DoubtRegisterCoordinator(homeDelegate: self).start(navigationController: self.navigationController)
         }
         let bill = UIAlertAction(title: "conta", style: .default) { _ in
             BillRegisterCoordinator().start(navigationController: self.navigationController,
