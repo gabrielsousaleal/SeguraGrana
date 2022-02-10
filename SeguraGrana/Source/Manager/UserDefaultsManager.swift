@@ -29,7 +29,9 @@ class UserDefaultsManager {
         do {
             let data = try encoder.encode(model)
             set(value: data as AnyObject, key: key)
-        } catch {}
+        } catch let error {
+            print(error)
+        }
     }
 
     func getModel<T: Codable>(model: T.Type, key: UserDefaultsKey) -> T? {

@@ -30,9 +30,9 @@ class RegisterCreditCardViewModel {
 
     private func appendCreditCardOnList(creditCard: CreditCardModel) -> [CreditCardModel] {
         var creditCardList = UserDefaultsManager().getModel(model: [CreditCardModel].self,
-                                                            key: .creditCards)
-        creditCardList?.append(creditCard)
-        return creditCardList ?? []
+                                                            key: .creditCards) ?? []
+        creditCardList.append(creditCard)
+        return creditCardList
     }
 
     private func isValidDate(date: String) -> Bool {

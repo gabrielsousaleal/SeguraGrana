@@ -17,6 +17,7 @@ class HomeViewModel {
 
     init(delegate: HomeViewControllerDelegate?) {
         self.homeViewControllerDelegate = delegate
+        populateDefaultCategories()
         insertSavedCategories()
         insertStaticCategories()
     }
@@ -24,7 +25,8 @@ class HomeViewModel {
     // MARK: - Private Properties
 
     private let userDefaultsManager = UserDefaultsManager()
-    private var allCategories: [DoubtCategoryModel] = [
+    private var allCategories: [DoubtCategoryModel] = []
+    private var defaultCategories: [DoubtCategoryModel] = [
             DoubtCategoryModel(name: "Contas",
                                icon: "bills"),
             DoubtCategoryModel(name: "Saúde",
@@ -114,6 +116,13 @@ class HomeViewModel {
     }
 
     // MARK: - Private Methods
+
+    private func populateDefaultCategories() {
+        if savedCategories.isEmpty {
+            userDefaultsManager.setModel(model: defaultCategories,
+                                         key: .categories)
+        }
+    }
 
     private var filtredDoubts: [DoubtModel] {
         if selectedCategory?.name == "Todos" { return allDoubts }

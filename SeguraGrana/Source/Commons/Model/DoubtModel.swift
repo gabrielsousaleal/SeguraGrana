@@ -13,4 +13,5 @@ struct DoubtModel: Codable {
     var category: DoubtCategoryModel
     var isReccurent: Bool
     var deadline: Int
+    var date: Date? = nil
 }

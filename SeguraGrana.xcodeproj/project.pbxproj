@@ -19,6 +19,9 @@
 		0538360727B0835A0003ED70 /* ValueInAccountViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0538360627B0835A0003ED70 /* ValueInAccountViewModel.swift */; };
 		0538360927B083F60003ED70 /* ValueInAccountCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0538360827B083F60003ED70 /* ValueInAccountCoordinator.swift */; };
 		0538360B27B084820003ED70 /* HomeCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0538360A27B084820003ED70 /* HomeCoordinator.swift */; };
+		058DBA3427B2FDD500DA2CBC /* DoubtRegister.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 058DBA3327B2FDD500DA2CBC /* DoubtRegister.storyboard */; };
+		058DBA3727B300C300DA2CBC /* DoubtRegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 058DBA3627B300C300DA2CBC /* DoubtRegisterViewController.swift */; };
+		058DBA3927B300F300DA2CBC /* DoubtRegisterCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 058DBA3827B300F300DA2CBC /* DoubtRegisterCoordinator.swift */; };
 		05A2838F27AB4234000BDC58 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05A2838E27AB4234000BDC58 /* AppDelegate.swift */; };
 		05A2839827AB4237000BDC58 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 05A2839727AB4237000BDC58 /* Assets.xcassets */; };
 		05A2839B27AB4237000BDC58 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 05A2839927AB4237000BDC58 /* LaunchScreen.storyboard */; };
@@ -45,6 +48,8 @@
 		05C83BB427B09383004D0337 /* CategoryCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 05C83BB327B09383004D0337 /* CategoryCollectionViewCell.xib */; };
 		05C83BB627B094B3004D0337 /* CategoryCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05C83BB527B094B3004D0337 /* CategoryCollectionViewCell.swift */; };
 		05CDD0D527ADEF76006FD03D /* SalaryModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05CDD0D427ADEF76006FD03D /* SalaryModel.swift */; };
+		05D3D39227B599510098C721 /* DoubtRegisterViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05D3D39127B599510098C721 /* DoubtRegisterViewModel.swift */; };
+		05D3D39427B5B9410098C721 /* UITextField+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05D3D39327B5B9410098C721 /* UITextField+.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -60,6 +65,9 @@
 		0538360627B0835A0003ED70 /* ValueInAccountViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ValueInAccountViewModel.swift; sourceTree = "<group>"; };
 		0538360827B083F60003ED70 /* ValueInAccountCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ValueInAccountCoordinator.swift; sourceTree = "<group>"; };
 		0538360A27B084820003ED70 /* HomeCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCoordinator.swift; sourceTree = "<group>"; };
+		058DBA3327B2FDD500DA2CBC /* DoubtRegister.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = DoubtRegister.storyboard; sourceTree = "<group>"; };
+		058DBA3627B300C300DA2CBC /* DoubtRegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoubtRegisterViewController.swift; sourceTree = "<group>"; };
+		058DBA3827B300F300DA2CBC /* DoubtRegisterCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoubtRegisterCoordinator.swift; sourceTree = "<group>"; };
 		05A2838B27AB4234000BDC58 /* SeguraGrana.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SeguraGrana.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		05A2838E27AB4234000BDC58 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		05A2839727AB4237000BDC58 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -88,6 +96,8 @@
 		05C83BB327B09383004D0337 /* CategoryCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CategoryCollectionViewCell.xib; sourceTree = "<group>"; };
 		05C83BB527B094B3004D0337 /* CategoryCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryCollectionViewCell.swift; sourceTree = "<group>"; };
 		05CDD0D427ADEF76006FD03D /* SalaryModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SalaryModel.swift; sourceTree = "<group>"; };
+		05D3D39127B599510098C721 /* DoubtRegisterViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoubtRegisterViewModel.swift; sourceTree = "<group>"; };
+		05D3D39327B5B9410098C721 /* UITextField+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITextField+.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -177,6 +187,40 @@
 			path = ViewController;
 			sourceTree = "<group>";
 		};
+		0569C87527B57EB500800F67 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				05D3D39127B599510098C721 /* DoubtRegisterViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		058DBA3127B2FDB300DA2CBC /* DoubtRegister */ = {
+			isa = PBXGroup;
+			children = (
+				0569C87527B57EB500800F67 /* ViewModel */,
+				058DBA3527B300AB00DA2CBC /* ViewController */,
+				058DBA3227B2FDC500DA2CBC /* Storyboard */,
+			);
+			path = DoubtRegister;
+			sourceTree = "<group>";
+		};
+		058DBA3227B2FDC500DA2CBC /* Storyboard */ = {
+			isa = PBXGroup;
+			children = (
+				058DBA3327B2FDD500DA2CBC /* DoubtRegister.storyboard */,
+			);
+			path = Storyboard;
+			sourceTree = "<group>";
+		};
+		058DBA3527B300AB00DA2CBC /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				058DBA3627B300C300DA2CBC /* DoubtRegisterViewController.swift */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
 		05A2838227AB4234000BDC58 = {
 			isa = PBXGroup;
 			children = (
@@ -226,6 +270,7 @@
 		05A283A427AB428A000BDC58 /* Feature */ = {
 			isa = PBXGroup;
 			children = (
+				058DBA3127B2FDB300DA2CBC /* DoubtRegister */,
 				052DEB0327B0A7C400B07F5B /* BillRegister */,
 				053835FE27B082200003ED70 /* ValueInAccount */,
 				05A283B727AB4EB2000BDC58 /* Salary */,
@@ -250,6 +295,7 @@
 				05A283AE27AB4D11000BDC58 /* String+.swift */,
 				05A283B027AB4D97000BDC58 /* UINavigationController+.swift */,
 				053835FC27B019050003ED70 /* Date+.swift */,
+				05D3D39327B5B9410098C721 /* UITextField+.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -294,6 +340,7 @@
 				0538360827B083F60003ED70 /* ValueInAccountCoordinator.swift */,
 				0538360A27B084820003ED70 /* HomeCoordinator.swift */,
 				052DEB0D27B0A94B00B07F5B /* BillRegisterCoordinator.swift */,
+				058DBA3827B300F300DA2CBC /* DoubtRegisterCoordinator.swift */,
 			);
 			path = Coordinator;
 			sourceTree = "<group>";
@@ -489,6 +536,7 @@
 				05A283A727AB42B2000BDC58 /* OnboardSalary.storyboard in Resources */,
 				05A283DE27AB74B0000BDC58 /* RegisterCreditCard.storyboard in Resources */,
 				05A2839B27AB4237000BDC58 /* LaunchScreen.storyboard in Resources */,
+				058DBA3427B2FDD500DA2CBC /* DoubtRegister.storyboard in Resources */,
 				05C83BB427B09383004D0337 /* CategoryCollectionViewCell.xib in Resources */,
 				05A2839827AB4237000BDC58 /* Assets.xcassets in Resources */,
 				052DEB0627B0A7E700B07F5B /* BillRegister.storyboard in Resources */,
@@ -510,6 +558,7 @@
 				0538360727B0835A0003ED70 /* ValueInAccountViewModel.swift in Sources */,
 				05A283B127AB4D97000BDC58 /* UINavigationController+.swift in Sources */,
 				05A283E527AB7E19000BDC58 /* RegisterCreditCardViewModel.swift in Sources */,
+				05D3D39227B599510098C721 /* DoubtRegisterViewModel.swift in Sources */,
 				052DEB0C27B0A92000B07F5B /* BillRegisterViewModel.swift in Sources */,
 				05C83BB627B094B3004D0337 /* CategoryCollectionViewCell.swift in Sources */,
 				053835FB27AEF12B0003ED70 /* HomeViewModel.swift in Sources */,
@@ -522,12 +571,15 @@
 				05A283D427AB7361000BDC58 /* CredidCardModel.swift in Sources */,
 				05CDD0D527ADEF76006FD03D /* SalaryModel.swift in Sources */,
 				05A283C227AB520E000BDC58 /* UserDefaultsKey.swift in Sources */,
+				058DBA3727B300C300DA2CBC /* DoubtRegisterViewController.swift in Sources */,
 				05A283C927AB5E5B000BDC58 /* HomeViewController.swift in Sources */,
+				05D3D39427B5B9410098C721 /* UITextField+.swift in Sources */,
 				0538360927B083F60003ED70 /* ValueInAccountCoordinator.swift in Sources */,
 				05A283D027AB7273000BDC58 /* DoubtModel.swift in Sources */,
 				05A283BF27AB5020000BDC58 /* OnboardSalaryViewModel.swift in Sources */,
 				05A283AC27AB497C000BDC58 /* UserDefaultsManager.swift in Sources */,
 				05A283D227AB72C2000BDC58 /* DoubtCategoryModel.swift in Sources */,
+				058DBA3927B300F300DA2CBC /* DoubtRegisterCoordinator.swift in Sources */,
 				052DEB0E27B0A94B00B07F5B /* BillRegisterCoordinator.swift in Sources */,
 				05A283E227AB793C000BDC58 /* RegisterCreditCardCoordinator.swift in Sources */,
 				05A283B627AB4E10000BDC58 /* LoadingView.swift in Sources */,

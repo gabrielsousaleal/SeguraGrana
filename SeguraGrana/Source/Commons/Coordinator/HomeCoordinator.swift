@@ -22,9 +22,10 @@ extension HomeCoordinator: BaseCoordinator {
             return
         }
         navigationController?.navigationBar.isHidden = true
+        controller.modalPresentationStyle = .fullScreen
         DispatchQueue.main.async {
-            navigationController?.present(controller,
-                                          animated: true)
+            navigationController?.pushViewController(controller,
+                                                     animated: true)
         }
     }
 }

@@ -15,4 +15,18 @@ extension Date {
     func get(_ component: Calendar.Component, calendar: Calendar = Calendar.current) -> Int {
         return calendar.component(component, from: self)
     }
+
+    func toString() -> String {
+        let dateFormatter = DateFormatter()
+        dateFormatter.locale = Locale(identifier: "pt_BR")
+        dateFormatter.dateFormat = "% dd @ MMMM"
+        let rawString = dateFormatter.string(from: self)
+        let string = rawString.replacingOccurrences(
+            of: "%",
+            with: "dia"
+        ).replacingOccurrences(of: "@", with: "de"
+        )
+
+        return string
+    }
 }
