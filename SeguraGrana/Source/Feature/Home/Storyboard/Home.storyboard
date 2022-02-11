@@ -73,7 +73,7 @@
                                                 </connections>
                                             </button>
                                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" style="plain" separatorStyle="none" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="uEA-1t-RmB" customClass="ContentWrappingTableView" customModule="SeguraGrana" customModuleProvider="target">
-                                                <rect key="frame" x="20" y="302" width="286" height="612"/>
+                                                <rect key="frame" x="20" y="302" width="286" height="652"/>
                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             </tableView>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="a83-i1-ZTq">
@@ -155,7 +155,7 @@
                                         </subviews>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
-                                            <constraint firstAttribute="bottom" secondItem="uEA-1t-RmB" secondAttribute="bottom" priority="250" constant="60" id="5Wj-Fx-Dw5"/>
+                                            <constraint firstAttribute="bottom" secondItem="uEA-1t-RmB" secondAttribute="bottom" constant="20" id="5Wj-Fx-Dw5"/>
                                             <constraint firstAttribute="trailing" secondItem="jSD-71-pCm" secondAttribute="trailing" id="6VC-zW-QVu"/>
                                             <constraint firstAttribute="trailing" secondItem="Bjq-gN-kJV" secondAttribute="trailing" constant="20" id="HoU-qq-cb1"/>
                                             <constraint firstItem="Bjq-gN-kJV" firstAttribute="top" secondItem="75j-im-bJ2" secondAttribute="bottom" constant="20" id="ILd-NL-9la"/>
@@ -179,6 +179,8 @@
                                     <constraint firstAttribute="bottom" secondItem="yWi-Jd-ukN" secondAttribute="bottom" id="5fn-8K-S0E"/>
                                     <constraint firstAttribute="trailing" secondItem="yWi-Jd-ukN" secondAttribute="trailing" id="RNy-Y8-vsN"/>
                                     <constraint firstItem="yWi-Jd-ukN" firstAttribute="leading" secondItem="ddY-UN-LAb" secondAttribute="leading" id="c1h-eg-7W7"/>
+                                    <constraint firstItem="yWi-Jd-ukN" firstAttribute="centerX" secondItem="ddY-UN-LAb" secondAttribute="centerX" id="f8g-5T-BJm"/>
+                                    <constraint firstItem="yWi-Jd-ukN" firstAttribute="centerY" secondItem="ddY-UN-LAb" secondAttribute="centerY" priority="250" id="nom-yY-0A8"/>
                                 </constraints>
                             </scrollView>
                         </subviews>
@@ -186,14 +188,10 @@
                         <color key="backgroundColor" white="0.070000000000000007" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="yWi-Jd-ukN" firstAttribute="centerY" secondItem="vDu-zF-Fre" secondAttribute="centerY" priority="250" id="0Gn-um-X2d"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="ddY-UN-LAb" secondAttribute="bottom" id="3de-cw-FLb"/>
-                            <constraint firstItem="ddY-UN-LAb" firstAttribute="width" secondItem="5EZ-qb-Rvc" secondAttribute="width" id="9lm-B1-aC8"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="ddY-UN-LAb" secondAttribute="trailing" id="b47-jt-gT2"/>
                             <constraint firstItem="ddY-UN-LAb" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="hVG-9a-xa2"/>
                             <constraint firstItem="ddY-UN-LAb" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" id="pno-eE-Rhr"/>
-                            <constraint firstItem="yWi-Jd-ukN" firstAttribute="centerX" secondItem="vDu-zF-Fre" secondAttribute="centerX" id="sTm-n4-YiE"/>
-                            <constraint firstItem="ddY-UN-LAb" firstAttribute="height" secondItem="5EZ-qb-Rvc" secondAttribute="height" id="uTz-zy-Vkk"/>
                         </constraints>
                     </view>
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
