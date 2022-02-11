@@ -25,8 +25,8 @@ class DoubtCell: UITableViewCell {
 
     // MARK: - Public Methods
 
-    func setup(doubt: DoubtModel, card: CreditCardModel?) {
-        self.viewModel = DoubtCellViewModel(doubt: doubt, card: card)
+    func setup(doubt: DoubtModel) {
+        self.viewModel = DoubtCellViewModel(doubt: doubt)
         setupLabels()
     }
 

@@ -14,4 +14,5 @@ struct DoubtModel: Codable {
     var isReccurent: Bool
     var deadline: Int
     var date: Date? = nil
+    var creditCard: CreditCardModel?
 }

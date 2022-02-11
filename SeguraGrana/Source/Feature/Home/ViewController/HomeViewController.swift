@@ -67,9 +67,7 @@ class HomeViewController: BaseViewController {
         let alert = UIAlertController(title: "Cadastrar categoria",
                                       message: "qual o nome da nova categoria?",
                                       preferredStyle: .alert)
-        alert.addTextField { textField in
-            textField.text = "nome"
-        }
+        alert.addTextField { _ in }
         let save = UIAlertAction(title: "salvar", style: .default) { _ in
             let text = alert.textFields?[0].text ?? .empty
             self.viewModel.saveCategory(name: text)
@@ -205,7 +203,7 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: kDoubtCellIdentifier) as? DoubtCell else { return UITableViewCell() }
         let doubt = viewModel.getDoubtByPosition(position: indexPath.row)
-        cell.setup(doubt: doubt, card: nil)
+        cell.setup(doubt: doubt)
         return cell
     }
 }

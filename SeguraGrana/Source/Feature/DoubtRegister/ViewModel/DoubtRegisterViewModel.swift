@@ -46,7 +46,8 @@ class DoubtRegisterViewModel {
                                category: category,
                                isReccurent: false,
                                deadline: creditCard.deadline,
-                               date: date)
+                               date: date,
+                               creditCard: creditCard)
         creditCard.doubts.append(doubt)
         updateCreditCards(newCard: creditCard)
         homeDelegate?.reloadTableViewData()

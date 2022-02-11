@@ -12,13 +12,11 @@ class DoubtCellViewModel{
     // MARK: - Private Properties
 
     private let doubt: DoubtModel
-    private let card: CreditCardModel?
 
     // MARK: - Life Cycle
 
-    init(doubt: DoubtModel, card: CreditCardModel?) {
+    init(doubt: DoubtModel) {
         self.doubt = doubt
-        self.card = card
     }
 
     // MARK: - Public Methods
@@ -37,7 +35,10 @@ class DoubtCellViewModel{
     }
 
     var doubtCardName: String {
-        card?.name ?? "conta mensal"
+        let cardName = doubt.creditCard?.name ?? .empty
+        if cardName.isEmpty { return "conta mensal" }
+        let format = "cartão %@"
+        return String(format: format, cardName)
     }
 
     var doubtPayday: String {
