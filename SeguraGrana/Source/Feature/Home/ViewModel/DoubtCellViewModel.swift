@@ -47,6 +47,6 @@ class DoubtCellViewModel{
     }
 
     var category: String {
-        doubt.category.name
+        doubt.category.name.lowercased()
     }
 }

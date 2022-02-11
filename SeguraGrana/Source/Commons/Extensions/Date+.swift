@@ -19,14 +19,7 @@ extension Date {
     func toString() -> String {
         let dateFormatter = DateFormatter()
         dateFormatter.locale = Locale(identifier: "pt_BR")
-        dateFormatter.dateFormat = "% dd @ MMMM"
-        let rawString = dateFormatter.string(from: self)
-        let string = rawString.replacingOccurrences(
-            of: "%",
-            with: "dia"
-        ).replacingOccurrences(of: "@", with: "de"
-        )
-
-        return string
+        dateFormatter.dateFormat = "dd MMM"
+        return dateFormatter.string(from: self)
     }
 }
