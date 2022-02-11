@@ -115,6 +115,19 @@ class HomeViewModel {
                                 key: .currentBalance)
     }
 
+    var totalInCategory: String {
+        let format = "total gasto em %@: %@"
+        var total: Double = 0
+        for doubt in filtredDoubts {
+            total += doubt.value
+        }
+        let totalString = String(total)
+        let totalInCategory = String(format: format,
+                                     selectedCategory?.name ?? .empty,
+                                     totalString.toCurrency())
+        return totalInCategory
+    }
+
     // MARK: - Private Methods
 
     private func populateDefaultCategories() {
@@ -132,11 +145,14 @@ class HomeViewModel {
     private var allDoubts: [DoubtModel] {
         var allDoubts: [DoubtModel] = []
         allDoubts.append(contentsOf: allBills)
+        var allCardDoubts: [DoubtModel] = []
         for creditCard in allCreditCards {
             for doubt in creditCard.doubts {
-                allDoubts.append(doubt)
+                allCardDoubts.append(doubt)
             }
         }
+        let sortedCardDoubts = allCardDoubts.sorted(by: { $0.date! > $1.date! })
+        allDoubts.append(contentsOf: sortedCardDoubts)
         return allDoubts
     }
 

@@ -50,7 +50,7 @@ class DoubtRegisterViewModel {
                                creditCard: creditCard)
         creditCard.doubts.append(doubt)
         updateCreditCards(newCard: creditCard)
-        homeDelegate?.reloadTableViewData()
+        homeDelegate?.reloadScreenData()
     }
 
     func validadeData(name: String, value: String) -> Bool {

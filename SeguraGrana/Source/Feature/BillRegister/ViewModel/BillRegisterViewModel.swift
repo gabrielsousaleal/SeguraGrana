@@ -39,9 +39,9 @@ class BillRegisterViewModel {
 
     private func appendBillOnList(bill: DoubtModel) -> [DoubtModel] {
         var billCardList = UserDefaultsManager().getModel(model: [DoubtModel].self,
-                                                          key: .bills)
-        billCardList?.append(bill)
-        return billCardList ?? []
+                                                          key: .bills) ?? []
+        billCardList.append(bill)
+        return billCardList
     }
 
     private func isValidDate(date: String) -> Bool {

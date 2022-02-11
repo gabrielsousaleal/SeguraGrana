@@ -73,7 +73,7 @@
                                                 </connections>
                                             </button>
                                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" style="plain" separatorStyle="none" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="uEA-1t-RmB" customClass="ContentWrappingTableView" customModule="SeguraGrana" customModuleProvider="target">
-                                                <rect key="frame" x="0.0" y="302" width="326" height="652"/>
+                                                <rect key="frame" x="0.0" y="359" width="326" height="595"/>
                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             </tableView>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="a83-i1-ZTq">
@@ -152,11 +152,32 @@
                                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ArT-Wk-bEp">
+                                                <rect key="frame" x="20" y="307" width="286" height="32"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="total em %@" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="U1g-b2-XKI">
+                                                        <rect key="frame" x="0.0" y="0.0" width="286" height="32"/>
+                                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="16"/>
+                                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="bottom" secondItem="U1g-b2-XKI" secondAttribute="bottom" id="83K-eu-m0z"/>
+                                                    <constraint firstItem="U1g-b2-XKI" firstAttribute="leading" secondItem="ArT-Wk-bEp" secondAttribute="leading" id="Aa2-GI-JAa"/>
+                                                    <constraint firstItem="U1g-b2-XKI" firstAttribute="top" secondItem="ArT-Wk-bEp" secondAttribute="top" id="STq-Y9-A7o"/>
+                                                    <constraint firstAttribute="height" constant="32" id="rxY-bj-5dd"/>
+                                                    <constraint firstAttribute="trailing" secondItem="U1g-b2-XKI" secondAttribute="trailing" id="xHc-6Z-70V"/>
+                                                </constraints>
+                                            </view>
                                         </subviews>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
                                             <constraint firstAttribute="bottom" secondItem="uEA-1t-RmB" secondAttribute="bottom" constant="20" id="5Wj-Fx-Dw5"/>
                                             <constraint firstAttribute="trailing" secondItem="jSD-71-pCm" secondAttribute="trailing" id="6VC-zW-QVu"/>
+                                            <constraint firstItem="ArT-Wk-bEp" firstAttribute="leading" secondItem="yWi-Jd-ukN" secondAttribute="leading" constant="20" id="FIU-4t-zcv"/>
+                                            <constraint firstAttribute="trailing" secondItem="ArT-Wk-bEp" secondAttribute="trailing" constant="20" id="Fnv-rm-eaD"/>
                                             <constraint firstAttribute="trailing" secondItem="Bjq-gN-kJV" secondAttribute="trailing" constant="20" id="HoU-qq-cb1"/>
                                             <constraint firstItem="Bjq-gN-kJV" firstAttribute="top" secondItem="75j-im-bJ2" secondAttribute="bottom" constant="20" id="ILd-NL-9la"/>
                                             <constraint firstItem="a83-i1-ZTq" firstAttribute="top" secondItem="yWi-Jd-ukN" secondAttribute="top" constant="40" id="XXl-pj-7fi"/>
@@ -166,10 +187,11 @@
                                             <constraint firstItem="e7D-uj-9Q2" firstAttribute="top" secondItem="Bjq-gN-kJV" secondAttribute="bottom" constant="15" id="nnB-o4-WDa"/>
                                             <constraint firstItem="75j-im-bJ2" firstAttribute="top" secondItem="yWi-Jd-ukN" secondAttribute="top" constant="40" id="oXP-x6-UGj"/>
                                             <constraint firstAttribute="trailing" secondItem="uEA-1t-RmB" secondAttribute="trailing" id="oeh-v6-jWL"/>
+                                            <constraint firstItem="uEA-1t-RmB" firstAttribute="top" secondItem="ArT-Wk-bEp" secondAttribute="bottom" constant="20" id="ooM-d3-nOS"/>
                                             <constraint firstItem="jSD-71-pCm" firstAttribute="top" secondItem="e7D-uj-9Q2" secondAttribute="bottom" constant="15" id="qHc-J1-yDO"/>
                                             <constraint firstAttribute="trailing" secondItem="a83-i1-ZTq" secondAttribute="trailing" constant="20" id="qRd-pa-272"/>
+                                            <constraint firstItem="ArT-Wk-bEp" firstAttribute="top" secondItem="jSD-71-pCm" secondAttribute="bottom" constant="20" id="qTs-P4-4YK"/>
                                             <constraint firstItem="Bjq-gN-kJV" firstAttribute="leading" secondItem="yWi-Jd-ukN" secondAttribute="leading" constant="20" id="tCc-1n-yHg"/>
-                                            <constraint firstItem="uEA-1t-RmB" firstAttribute="top" secondItem="jSD-71-pCm" secondAttribute="bottom" constant="15" id="xG0-g5-4lO"/>
                                             <constraint firstItem="e7D-uj-9Q2" firstAttribute="leading" secondItem="Bjq-gN-kJV" secondAttribute="leading" id="ywe-t5-2XG"/>
                                         </constraints>
                                     </view>
@@ -202,6 +224,7 @@
                         <outlet property="doubtsTableView" destination="uEA-1t-RmB" id="ycC-ow-5VU"/>
                         <outlet property="negativeBalance" destination="eqy-b4-Y1Q" id="gTU-EP-jJ5"/>
                         <outlet property="positiveBalance" destination="pyr-Xi-5bL" id="KYn-Yr-eJV"/>
+                        <outlet property="totalInCategory" destination="U1g-b2-XKI" id="BlM-AW-uPD"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

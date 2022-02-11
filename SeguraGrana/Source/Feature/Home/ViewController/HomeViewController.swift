@@ -8,16 +8,15 @@
 import UIKit
 
 protocol HomeViewControllerDelegate: AnyObject {
-    func reloadTableViewData()
-    func reloadCollectionViewData()
+    func reloadScreenData()
     func addNewCategory()
-    func setupLabels()
 }
 
 class HomeViewController: BaseViewController {
 
     // MARK: - Storyboard Outlets
 
+    @IBOutlet weak var totalInCategory: UILabel!
     @IBOutlet weak var addDoubtButton: UIButton!
     @IBOutlet weak var positiveBalance: UILabel!
     @IBOutlet weak var negativeBalance: UILabel!
@@ -44,6 +43,12 @@ class HomeViewController: BaseViewController {
     }
 
     // MARK: - Private Properties
+
+    private func setupLabels() {
+        positiveBalance.text = viewModel.currentBalance
+        negativeBalance.text = viewModel.currentNegativeBalance
+        totalInCategory.text = viewModel.totalInCategory
+    }
 
     private func showCategoryRegisterAlert() {
         let alert = UIAlertController(title: "Cadastrar categoria",
@@ -149,30 +154,21 @@ extension HomeViewController: UICollectionViewDelegate, UICollectionViewDataSour
 
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         viewModel.selectCategory(position: indexPath.row)
-        collectionView.reloadData()
-        doubtsTableView.reloadData()
+        reloadScreenData()
     }
 }
 
 // MARK: - Controller Delegate
 
 extension HomeViewController: HomeViewControllerDelegate {
-    func reloadTableViewData() {
+    func reloadScreenData() {
         doubtsTableView.reloadData()
+        categoriesCollectionView.reloadData()
         setupLabels()
     }
 
     func addNewCategory() {
         showCategoryRegisterAlert()
-    }
-
-    func reloadCollectionViewData() {
-        categoriesCollectionView.reloadData()
-    }
-
-    func setupLabels() {
-        positiveBalance.text = viewModel.currentBalance
-        negativeBalance.text = viewModel.currentNegativeBalance
     }
 }
 
