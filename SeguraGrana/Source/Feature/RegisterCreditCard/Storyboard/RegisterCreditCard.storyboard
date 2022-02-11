@@ -8,22 +8,16 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Register Credit Card View Controller-->
+        <!--Adicionar cartão-->
         <scene sceneID="s0d-6b-0kx">
             <objects>
-                <viewController id="Y6W-OH-hqX" customClass="RegisterCreditCardViewController" customModule="SeguraGrana" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="Adicionar cartão" id="Y6W-OH-hqX" customClass="RegisterCreditCardViewController" customModule="SeguraGrana" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Adicione seu cartão" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tS7-7h-RoI">
-                                <rect key="frame" x="108.5" y="84" width="197" height="27"/>
-                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="22"/>
-                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="61Q-1b-dtK">
-                                <rect key="frame" x="40" y="171" width="334" height="34"/>
+                                <rect key="frame" x="20" y="101" width="354" height="34"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
@@ -46,18 +40,18 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="qual o nome desse cartão?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3O0-eA-odh">
-                                <rect key="frame" x="40" y="146" width="174" height="17"/>
+                                <rect key="frame" x="20" y="64" width="174" height="17"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Mqu-NG-ET0">
-                                <rect key="frame" x="40" y="280" width="334" height="34"/>
+                                <rect key="frame" x="20" y="222" width="354" height="34"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="qual o dia de pagamento dele?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="x50-Kk-qj9">
-                                <rect key="frame" x="40" y="255" width="334" height="17"/>
+                                <rect key="frame" x="20" y="185" width="354" height="17"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
@@ -67,20 +61,18 @@
                         <color key="backgroundColor" white="0.070000000000000007" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="Mqu-NG-ET0" firstAttribute="trailing" secondItem="x50-Kk-qj9" secondAttribute="trailing" id="0qf-FV-8lr"/>
-                            <constraint firstItem="x50-Kk-qj9" firstAttribute="leading" secondItem="61Q-1b-dtK" secondAttribute="leading" id="Ev8-V2-dwO"/>
-                            <constraint firstItem="tS7-7h-RoI" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="40" id="JAX-KQ-WrG"/>
+                            <constraint firstItem="61Q-1b-dtK" firstAttribute="leading" secondItem="3O0-eA-odh" secondAttribute="leading" id="AS0-Ca-6mV"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="6r9-N1-cwV" secondAttribute="bottom" constant="20" id="JsD-Pa-vjm"/>
-                            <constraint firstItem="3O0-eA-odh" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="40" id="Ko9-fC-Nsf"/>
-                            <constraint firstItem="Mqu-NG-ET0" firstAttribute="leading" secondItem="61Q-1b-dtK" secondAttribute="leading" id="Mwg-pM-JDC"/>
+                            <constraint firstItem="x50-Kk-qj9" firstAttribute="leading" secondItem="3O0-eA-odh" secondAttribute="leading" id="O2e-je-Omg"/>
                             <constraint firstItem="x50-Kk-qj9" firstAttribute="top" secondItem="61Q-1b-dtK" secondAttribute="bottom" constant="50" id="Q4x-Pk-nrn"/>
-                            <constraint firstItem="tS7-7h-RoI" firstAttribute="centerX" secondItem="vDu-zF-Fre" secondAttribute="centerX" id="RSW-AI-YXF"/>
-                            <constraint firstItem="61Q-1b-dtK" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="40" id="UpD-tB-Tda"/>
                             <constraint firstItem="Mqu-NG-ET0" firstAttribute="trailing" secondItem="61Q-1b-dtK" secondAttribute="trailing" id="W2v-bE-XqZ"/>
-                            <constraint firstItem="61Q-1b-dtK" firstAttribute="top" secondItem="3O0-eA-odh" secondAttribute="bottom" constant="8" symbolic="YES" id="WrG-X5-UIF"/>
+                            <constraint firstItem="61Q-1b-dtK" firstAttribute="top" secondItem="3O0-eA-odh" secondAttribute="bottom" constant="20" id="WrG-X5-UIF"/>
+                            <constraint firstItem="Mqu-NG-ET0" firstAttribute="leading" secondItem="61Q-1b-dtK" secondAttribute="leading" id="b3I-mT-vuS"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="61Q-1b-dtK" secondAttribute="trailing" constant="40" id="fT8-6S-dw5"/>
-                            <constraint firstItem="61Q-1b-dtK" firstAttribute="top" secondItem="tS7-7h-RoI" secondAttribute="bottom" constant="60" id="hrN-Gx-U18"/>
-                            <constraint firstItem="Mqu-NG-ET0" firstAttribute="top" secondItem="x50-Kk-qj9" secondAttribute="bottom" constant="8" symbolic="YES" id="jug-lG-j5Z"/>
+                            <constraint firstItem="3O0-eA-odh" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="20" id="hr1-SG-Tb5"/>
+                            <constraint firstItem="Mqu-NG-ET0" firstAttribute="top" secondItem="x50-Kk-qj9" secondAttribute="bottom" constant="20" id="jug-lG-j5Z"/>
                             <constraint firstItem="6r9-N1-cwV" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="20" id="qd9-Oq-8AG"/>
+                            <constraint firstItem="3O0-eA-odh" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="20" id="tmh-D8-oQF"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="6r9-N1-cwV" secondAttribute="trailing" constant="20" id="zXr-BQ-HGo"/>
                         </constraints>
                     </view>

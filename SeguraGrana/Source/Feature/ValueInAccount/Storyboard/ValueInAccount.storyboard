@@ -8,22 +8,16 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Value In Account View Controller-->
+        <!--Saldo em conta-->
         <scene sceneID="oTh-c7-Bsc">
             <objects>
-                <viewController id="3C7-md-cNq" customClass="ValueInAccountViewController" customModule="SeguraGrana" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="Saldo em conta" id="3C7-md-cNq" customClass="ValueInAccountViewController" customModule="SeguraGrana" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="6GW-cs-ID7">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Quanto você tem na sua conta?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6Vt-7m-PWf">
-                                <rect key="frame" x="50.5" y="84" width="313" height="27"/>
-                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="22"/>
-                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="kFH-XU-GSF">
-                                <rect key="frame" x="40" y="171" width="334" height="34"/>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="R$0,00" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="kFH-XU-GSF">
+                                <rect key="frame" x="20" y="101" width="354" height="34"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
@@ -45,16 +39,22 @@
                                     <action selector="continueButtonDidTapped:" destination="3C7-md-cNq" eventType="touchUpInside" id="rwc-8Y-a5T"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="quanto você tem na sua conta?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PsU-yy-NEm">
+                                <rect key="frame" x="20" y="64" width="202" height="17"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="Abl-Bq-Ttz"/>
                         <color key="backgroundColor" white="0.070000000000000007" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="Abl-Bq-Ttz" firstAttribute="trailing" secondItem="kFH-XU-GSF" secondAttribute="trailing" constant="40" id="6zP-ka-cza"/>
                             <constraint firstItem="Abl-Bq-Ttz" firstAttribute="bottom" secondItem="uHo-Zc-0Z1" secondAttribute="bottom" constant="20" id="IPM-fK-kvT"/>
-                            <constraint firstItem="kFH-XU-GSF" firstAttribute="leading" secondItem="Abl-Bq-Ttz" secondAttribute="leading" constant="40" id="LsL-cd-IBn"/>
-                            <constraint firstItem="6Vt-7m-PWf" firstAttribute="top" secondItem="Abl-Bq-Ttz" secondAttribute="top" constant="40" id="MJh-CI-lIw"/>
-                            <constraint firstItem="kFH-XU-GSF" firstAttribute="top" secondItem="6Vt-7m-PWf" secondAttribute="bottom" constant="60" id="NSx-AZ-J39"/>
-                            <constraint firstItem="6Vt-7m-PWf" firstAttribute="centerX" secondItem="Abl-Bq-Ttz" secondAttribute="centerX" id="Yga-V8-NPF"/>
+                            <constraint firstItem="kFH-XU-GSF" firstAttribute="top" secondItem="PsU-yy-NEm" secondAttribute="bottom" constant="20" id="Oif-a9-Ign"/>
+                            <constraint firstItem="PsU-yy-NEm" firstAttribute="leading" secondItem="Abl-Bq-Ttz" secondAttribute="leading" constant="20" id="PgH-w4-gbt"/>
+                            <constraint firstItem="PsU-yy-NEm" firstAttribute="top" secondItem="Abl-Bq-Ttz" secondAttribute="top" constant="20" id="RpS-Nm-ev4"/>
+                            <constraint firstItem="kFH-XU-GSF" firstAttribute="leading" secondItem="PsU-yy-NEm" secondAttribute="leading" id="bEh-H6-kVD"/>
                             <constraint firstItem="Abl-Bq-Ttz" firstAttribute="trailing" secondItem="uHo-Zc-0Z1" secondAttribute="trailing" constant="20" id="k3x-tt-IDo"/>
                             <constraint firstItem="uHo-Zc-0Z1" firstAttribute="leading" secondItem="Abl-Bq-Ttz" secondAttribute="leading" constant="20" id="llc-Mk-m5X"/>
                         </constraints>
