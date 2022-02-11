@@ -9,6 +9,8 @@ import UIKit
 
 extension UINavigationController {
     func clearNavigation() {
+        print(1)
+        navigationBar.prefersLargeTitles = true
         navigationBar.tintColor = .systemGreen
         navigationBar.topItem?.title = .empty
         navigationBar.setBackgroundImage(UIImage(), for: .default)

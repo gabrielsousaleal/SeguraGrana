@@ -13,11 +13,6 @@ class BaseNavigationController: UINavigationController {
         super.viewDidLoad()
     }
 
-    override func viewDidLayoutSubviews() {
-        super.viewDidLayoutSubviews()
-        clearNavigation()
-    }
-
     override var preferredStatusBarStyle: UIStatusBarStyle {
         return .lightContent
     }

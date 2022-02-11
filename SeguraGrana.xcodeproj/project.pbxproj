@@ -53,6 +53,7 @@
 		05D3D39927B5CF140098C721 /* DoubtCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05D3D39827B5CF140098C721 /* DoubtCell.swift */; };
 		05D3D39B27B5CF2F0098C721 /* DoubtCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 05D3D39A27B5CF2F0098C721 /* DoubtCell.xib */; };
 		05D3D39F27B5D1B00098C721 /* DoubtCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05D3D39E27B5D1B00098C721 /* DoubtCellViewModel.swift */; };
+		05D3D3A127B5E3710098C721 /* ContentWrapingTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05D3D3A027B5E3710098C721 /* ContentWrapingTableView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -104,6 +105,7 @@
 		05D3D39827B5CF140098C721 /* DoubtCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoubtCell.swift; sourceTree = "<group>"; };
 		05D3D39A27B5CF2F0098C721 /* DoubtCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DoubtCell.xib; sourceTree = "<group>"; };
 		05D3D39E27B5D1B00098C721 /* DoubtCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoubtCellViewModel.swift; sourceTree = "<group>"; };
+		05D3D3A027B5E3710098C721 /* ContentWrapingTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentWrapingTableView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -477,6 +479,7 @@
 			children = (
 				05D3D39D27B5D19A0098C721 /* CategoryCell */,
 				05D3D39C27B5D18F0098C721 /* DoubtCell */,
+				05D3D3A027B5E3710098C721 /* ContentWrapingTableView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -604,6 +607,7 @@
 				0538360927B083F60003ED70 /* ValueInAccountCoordinator.swift in Sources */,
 				05A283D027AB7273000BDC58 /* DoubtModel.swift in Sources */,
 				05A283BF27AB5020000BDC58 /* OnboardSalaryViewModel.swift in Sources */,
+				05D3D3A127B5E3710098C721 /* ContentWrapingTableView.swift in Sources */,
 				05A283AC27AB497C000BDC58 /* UserDefaultsManager.swift in Sources */,
 				05A283D227AB72C2000BDC58 /* DoubtCategoryModel.swift in Sources */,
 				058DBA3927B300F300DA2CBC /* DoubtRegisterCoordinator.swift in Sources */,

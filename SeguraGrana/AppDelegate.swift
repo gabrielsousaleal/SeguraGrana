@@ -46,6 +46,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         else { return }
         let selectedVC = didOnboard ? homeVC : salaryVC
         let navigationController = BaseNavigationController(rootViewController: selectedVC)
+        navigationController.clearNavigation()
         window?.rootViewController = navigationController
         window?.makeKeyAndVisible()
     }

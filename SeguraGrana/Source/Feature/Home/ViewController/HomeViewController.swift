@@ -21,19 +21,25 @@ class HomeViewController: BaseViewController {
     @IBOutlet weak var addDoubtButton: UIButton!
     @IBOutlet weak var positiveBalance: UILabel!
     @IBOutlet weak var negativeBalance: UILabel!
-    @IBOutlet weak var doubtsTableView: UITableView!
+    @IBOutlet weak var doubtsTableView: ContentWrappingTableView!
     @IBOutlet weak var categoriesCollectionView: UICollectionView!
 
     // MARK: - Constants
 
     private let kCategoryCellIdentifier = "CategoryCollectionViewCell"
     private let kDoubtCellIdentifier = "DoubtCell"
+    private let kControllerTitle = "Segura Grana"
 
     // MARK: - Private Properties
 
     private var viewModel: HomeViewModel!
 
     // MARK: - Life Cycle
+
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        setupNavigationAppearance()
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -44,6 +50,18 @@ class HomeViewController: BaseViewController {
     }
 
     // MARK: - Private Properties
+
+    private func setupNavigationAppearance() {
+        navigationController?.navigationBar.topItem?.title = kControllerTitle
+        navigationController?.navigationBar.largeTitleTextAttributes = [.foregroundColor: UIColor.white]
+        navigationController?.navigationBar.titleTextAttributes = [.foregroundColor: UIColor.white]
+        for view in self.navigationController?.navigationBar.subviews ?? [] {
+             let subviews = view.subviews
+             if subviews.count > 0, let label = subviews[0] as? UILabel {
+                 label.textColor = .white
+             }
+        }
+    }
 
     private func showCategoryRegisterAlert() {
         let alert = UIAlertController(title: "Cadastrar categoria",
