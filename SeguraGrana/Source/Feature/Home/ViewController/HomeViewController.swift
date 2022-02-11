@@ -105,7 +105,7 @@ class HomeViewController: BaseViewController {
     }
 
     private func setupUI() {
-        addDoubtButton.layer.cornerRadius = addDoubtButton.frame.size.width/2
+        addDoubtButton.circle()
     }
 
     // MARK: - Storyboard Actions

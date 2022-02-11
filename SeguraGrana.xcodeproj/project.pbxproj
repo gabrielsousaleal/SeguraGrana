@@ -19,6 +19,7 @@
 		0538360727B0835A0003ED70 /* ValueInAccountViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0538360627B0835A0003ED70 /* ValueInAccountViewModel.swift */; };
 		0538360927B083F60003ED70 /* ValueInAccountCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0538360827B083F60003ED70 /* ValueInAccountCoordinator.swift */; };
 		0538360B27B084820003ED70 /* HomeCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0538360A27B084820003ED70 /* HomeCoordinator.swift */; };
+		054366E427B6B6DE00F3A0F4 /* UIView+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 054366E327B6B6DE00F3A0F4 /* UIView+.swift */; };
 		058DBA3427B2FDD500DA2CBC /* DoubtRegister.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 058DBA3327B2FDD500DA2CBC /* DoubtRegister.storyboard */; };
 		058DBA3727B300C300DA2CBC /* DoubtRegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 058DBA3627B300C300DA2CBC /* DoubtRegisterViewController.swift */; };
 		058DBA3927B300F300DA2CBC /* DoubtRegisterCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 058DBA3827B300F300DA2CBC /* DoubtRegisterCoordinator.swift */; };
@@ -69,6 +70,7 @@
 		0538360627B0835A0003ED70 /* ValueInAccountViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ValueInAccountViewModel.swift; sourceTree = "<group>"; };
 		0538360827B083F60003ED70 /* ValueInAccountCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ValueInAccountCoordinator.swift; sourceTree = "<group>"; };
 		0538360A27B084820003ED70 /* HomeCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCoordinator.swift; sourceTree = "<group>"; };
+		054366E327B6B6DE00F3A0F4 /* UIView+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+.swift"; sourceTree = "<group>"; };
 		058DBA3327B2FDD500DA2CBC /* DoubtRegister.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = DoubtRegister.storyboard; sourceTree = "<group>"; };
 		058DBA3627B300C300DA2CBC /* DoubtRegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoubtRegisterViewController.swift; sourceTree = "<group>"; };
 		058DBA3827B300F300DA2CBC /* DoubtRegisterCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoubtRegisterCoordinator.swift; sourceTree = "<group>"; };
@@ -305,6 +307,7 @@
 				05A283B027AB4D97000BDC58 /* UINavigationController+.swift */,
 				053835FC27B019050003ED70 /* Date+.swift */,
 				05D3D39327B5B9410098C721 /* UITextField+.swift */,
+				054366E327B6B6DE00F3A0F4 /* UIView+.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -605,6 +608,7 @@
 				05A283C927AB5E5B000BDC58 /* HomeViewController.swift in Sources */,
 				05D3D39427B5B9410098C721 /* UITextField+.swift in Sources */,
 				0538360927B083F60003ED70 /* ValueInAccountCoordinator.swift in Sources */,
+				054366E427B6B6DE00F3A0F4 /* UIView+.swift in Sources */,
 				05A283D027AB7273000BDC58 /* DoubtModel.swift in Sources */,
 				05A283BF27AB5020000BDC58 /* OnboardSalaryViewModel.swift in Sources */,
 				05D3D3A127B5E3710098C721 /* ContentWrapingTableView.swift in Sources */,

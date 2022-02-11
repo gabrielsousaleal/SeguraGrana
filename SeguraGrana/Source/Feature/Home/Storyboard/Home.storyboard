@@ -72,8 +72,8 @@
                                                     <action selector="recieveSalary:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="rbi-da-Hax"/>
                                                 </connections>
                                             </button>
-                                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" style="plain" separatorStyle="none" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="uEA-1t-RmB" customClass="ContentWrappingTableView" customModule="SeguraGrana" customModuleProvider="target">
-                                                <rect key="frame" x="20" y="302" width="286" height="652"/>
+                                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" style="plain" separatorStyle="none" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="uEA-1t-RmB" customClass="ContentWrappingTableView" customModule="SeguraGrana" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="302" width="326" height="652"/>
                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             </tableView>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="a83-i1-ZTq">
@@ -160,12 +160,12 @@
                                             <constraint firstAttribute="trailing" secondItem="Bjq-gN-kJV" secondAttribute="trailing" constant="20" id="HoU-qq-cb1"/>
                                             <constraint firstItem="Bjq-gN-kJV" firstAttribute="top" secondItem="75j-im-bJ2" secondAttribute="bottom" constant="20" id="ILd-NL-9la"/>
                                             <constraint firstItem="a83-i1-ZTq" firstAttribute="top" secondItem="yWi-Jd-ukN" secondAttribute="top" constant="40" id="XXl-pj-7fi"/>
-                                            <constraint firstItem="uEA-1t-RmB" firstAttribute="leading" secondItem="yWi-Jd-ukN" secondAttribute="leading" constant="20" id="fnj-1V-J34"/>
+                                            <constraint firstItem="uEA-1t-RmB" firstAttribute="leading" secondItem="yWi-Jd-ukN" secondAttribute="leading" id="fnj-1V-J34"/>
                                             <constraint firstItem="jSD-71-pCm" firstAttribute="leading" secondItem="yWi-Jd-ukN" secondAttribute="leading" id="kit-pn-l0K"/>
                                             <constraint firstItem="75j-im-bJ2" firstAttribute="leading" secondItem="yWi-Jd-ukN" secondAttribute="leading" constant="20" id="lx9-gk-VwA"/>
                                             <constraint firstItem="e7D-uj-9Q2" firstAttribute="top" secondItem="Bjq-gN-kJV" secondAttribute="bottom" constant="15" id="nnB-o4-WDa"/>
                                             <constraint firstItem="75j-im-bJ2" firstAttribute="top" secondItem="yWi-Jd-ukN" secondAttribute="top" constant="40" id="oXP-x6-UGj"/>
-                                            <constraint firstAttribute="trailing" secondItem="uEA-1t-RmB" secondAttribute="trailing" constant="20" id="oeh-v6-jWL"/>
+                                            <constraint firstAttribute="trailing" secondItem="uEA-1t-RmB" secondAttribute="trailing" id="oeh-v6-jWL"/>
                                             <constraint firstItem="jSD-71-pCm" firstAttribute="top" secondItem="e7D-uj-9Q2" secondAttribute="bottom" constant="15" id="qHc-J1-yDO"/>
                                             <constraint firstAttribute="trailing" secondItem="a83-i1-ZTq" secondAttribute="trailing" constant="20" id="qRd-pa-272"/>
                                             <constraint firstItem="Bjq-gN-kJV" firstAttribute="leading" secondItem="yWi-Jd-ukN" secondAttribute="leading" constant="20" id="tCc-1n-yHg"/>

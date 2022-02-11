@@ -12,6 +12,7 @@ class DoubtCell: UITableViewCell {
 
     // MARK: - Storyboard Outlets
 
+    @IBOutlet weak var categoryView: UIView!
     @IBOutlet private weak var doubtDateLabel: UILabel!
     @IBOutlet private weak var doubtNameLabel: UILabel!
     @IBOutlet private weak var doubtValueLabel: UILabel!
@@ -27,6 +28,7 @@ class DoubtCell: UITableViewCell {
 
     func setup(doubt: DoubtModel) {
         self.viewModel = DoubtCellViewModel(doubt: doubt)
+        categoryView.circle()
         setupLabels()
     }
 
